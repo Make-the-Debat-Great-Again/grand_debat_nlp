@@ -1,0 +1,70 @@
+word,class
+transport en commun,ML
+voiture,ML
+voiture éléctrique,ML
+voiture diesel,ML
+voiture hybride,ML
+train,ML
+bus,ML
+tramway,ML
+tram,ML
+vélo,ML
+trottinette,ML
+bateau,ML
+voie de chemin de fer,I
+voie de tramway,I
+voie de tram,I
+voie de bus,I
+ferroviaire,I
+routier,P
+route,I
+rue,I
+avenue,I
+autoroute,I
+covoiturage,P
+covoit,P
+sncf,E
+ter,E
+tgv,E
+ouigo,E
+ouibus,E
+flixbus,E
+blablacar,E
+ligne de train,I
+ligne de bus,I
+ligne de tramway,I
+petit ligne,I
+grande ligne,I
+piste cyclable,I
+voie cyclable,I
+bande cyclable,I
+station de tramway,I
+station de tram,I
+arrêt de bus,I
+gare,I
+gare tgv,I
+gare routière,I
+essence,C
+diesel,C
+bioéthanol,C
+GPL,C
+E95,C
+E10,C
+gasoil,C
+gazole,C
+voiture électrique,ML
+passager,N
+trajet,N
+déplacement,N
+voyage,N
+aller au travail,P
+aller en ville,P
+marche à pieds,ML
+faire du stop,P
+avion,ML
+aéroport,I
+rue piétonne,I
+réseaux,I
+navette,ML
+parking,I
+réseau,I

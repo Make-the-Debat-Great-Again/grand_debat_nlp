@@ -14,7 +14,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+
 lib64/
 parts/
 sdist/
@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# SOFT
+.vscode
+
+# CUSTOM
+data
+resources/classification_model/clas*
+resources/classification_model/tok*

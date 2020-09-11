@@ -1,0 +1,53 @@
+word,class
+accélérer,P
+ralentir,N
+limiter,N
+construire,P
+détruire,N
+baisser,N
+hausser,P
+changer,M
+interdire,N
+baisser,N
+autoriser,P
+développer,P
+réduire,N
+augmenter,P
+diminuer,N
+sortir,M
+modifier,M
+supprimer,N
+cesser,N
+adapter,M
+arrêter,N
+démarrer,P
+créer,P
+remettre,C
+mettre,C
+installer,C
+acheter,C
+aménager,C
+remplacer,P
+ajouter,P
+mise en place de,C
+mettre à disposition,C
+financer,N
+valoriser,P
+privilégier,N
+plus de,P
+moins de,N
+amélioration de,P
+développement de,P
+davantage de,P
+augmentation de,P
+diminution de,N
+réduction de,N
+baisse de,N
+hausse de,P
+création de,P
+multiplier,P
+diviser,N
+additionner,P
+sécuriser,N
+améliorer,P
+instaurer,N
