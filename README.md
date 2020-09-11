@@ -61,13 +61,13 @@ The output file contains the results of the classification. Each line correspond
 
 You can find an output sample in in the `example` directory.
 
-# Count terms
+# Count terms
 
 To measure the occurrence of specific terms from the lexicons (check the `resources/lexiques` directory), use the following command:
 
     python3 count_terms.py <grand_debat_dataset> <classification_result>
 
-# Count co-occurrences patterns
+# Count co-occurrences patterns
 
 To measure the co-occurrence patterns based on the lexicons (check the `resources/lexiques` directory), use the following command:
 
