@@ -1,21 +1,18 @@
+import argparse
 
+# DATA
 import pandas as pd
 
-import json
-import numpy as np
+#NLP
+from lib.utils import  lemmatize
+from stop_words import get_stop_words
+
+# PROGRESS BAR
 from tqdm import tqdm
 tqdm.pandas()
-import argparse
-import joblib
 
-from lib.utils import parallel_talismane,extract_lemma_spacy
-import spacy
-
-
-import nltk
-from nltk.tokenize import word_tokenize
-
-from joblib import Parallel,delayed
+# PARALLELIZATION AND LOAD BINARY FILES
+from joblib import Parallel,delayed, load
 
 question_col_index_to_analyse = {
     "transition_eco":[0,1,3,5,6,7,9,11,12,13,14,15],
@@ -46,8 +43,8 @@ QUESTIONS_INDEXES = question_col_index_to_analyse[code_questions[args.code_datas
 
 
 # LOAD CLASSIFIER
-clf = joblib.load("./resources/classification_model/classifier_svm.dump")
-tokenizer = joblib.load("./resources/classification_model/tokenizer.dump")
+clf = load("./resources/classification_model/classifier_svm.dump")
+tokenizer = load("./resources/classification_model/tokenizer.dump")
 
 def classify(x):
     if len(x)<1:
@@ -61,23 +58,18 @@ def classify(x):
 
 reponse_columns = df.columns[11:]
 
-def transform_and_return(df):
-    df.LEMMA = df.apply(lambda x : str(x.FORM).lower() if str(x.LEMMA)=="_" else str(x.LEMMA),axis=1)
-    return df
 
 new_data = {}
-if args.s:
-    nlp = spacy.load("fr")
+fr_stop = get_stop_words("french")
 
 for x in QUESTIONS_INDEXES:
     col = reponse_columns[x]
     print("Process the question:",col)
     print("Lemmatisation...")
     if not args.s:
-        lemma = [transform_and_return(talismane_data).LEMMA.values for talismane_data in parallel_talismane(data=df[col].values,batch_size=1000)]
+        lemma = lemmatize(df[col].values,fr_stop,lemmatizer="talismane")
     else:
-        extract_lemma_spacy(nlp,df,col,stop_words=[])
-        lemma = df["lemma"].values
+        lemma = lemmatize(df[col].values,fr_stop,lemmatizer="spacy")
     print("Classification...")
     new_data[col] = Parallel(n_jobs=-1,backend="multiprocessing")(delayed(classify)(x) for x in tqdm(lemma)) 
 

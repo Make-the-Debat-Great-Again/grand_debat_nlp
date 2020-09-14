@@ -9,6 +9,12 @@ from lib.textometry import *
 from lib.helpers import *
 from lib.constant import *
 
+
+from lib.utils import lemmatize
+from stop_words import get_stop_words
+fr_stop = get_stop_words("french")
+
+
 # Pandas shoots warning non-stop ... so chouh !
 import warnings
 warnings.simplefilter(action='ignore', category=pd.errors.DtypeWarning)
@@ -16,6 +22,8 @@ warnings.simplefilter(action='ignore', category=pd.errors.DtypeWarning)
 parser = argparse.ArgumentParser()
 parser.add_argument("data_fn")
 parser.add_argument("classification_result_fn")
+parser.add_argument("-s",action="store_true",help="Use Spacy to lemmatize")
+
 
 args = parser.parse_args()
 
@@ -34,7 +42,10 @@ for lex in lexiques:
     for q in df_classification.columns[:-4]:
         print("Processing Lexique {0} and question {1}".format(lex,q))
         data_question  = get_question_with_transport_data(df_data,df_classification,q)
-        lemmas = get_lemmas_from_texts(data_question.values)
+        if not args.s:
+            lemmas = lemmatize(data_question,fr_stop,lemmatizer="talismane")
+        else:
+            lemmas = lemmatize(data_question,fr_stop,lemmatizer="spacy")
         matched_words = match_lexique_to_responses_texts(lemmas,lexiques[lex])
         count_dict = count_occurrences(matched_words,lexique_dataframe=lexiques[lex],binary=True,min_support=10)
         data[lex][q]=count_dict

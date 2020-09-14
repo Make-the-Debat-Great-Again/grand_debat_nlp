@@ -10,9 +10,7 @@ import numpy as np
 #NLP
 from stop_words import get_stop_words
 from keras.preprocessing.text import Tokenizer
-import spacy
-from lib.utils import extract_lemma_spacy
-from lib.utils import parallel_talismane
+from lib.utils import lemmatize
 
 # ML
 from sklearn import svm
@@ -93,23 +91,15 @@ dataset = pd.concat((class_non_transport,class_transport)) # On construit le jeu
 # EXTRACT LEMMATIZED FORM FROM INPUT TEXTS
 fr_stop = get_stop_words("french")
 
-def transform_and_return(df):
-    df["LEMMA"] = df.apply(lambda x : str(x.FORM).lower() if str(x.LEMMA)=="_" else str(x.LEMMA),axis=1)
-    df = df[~df.LEMMA.isin(fr_stop)]
-    return df
 
 ## EXTRACT LEMMATIZED VERSION OF INPUT TEXTS
 #TALISMANE
 if not args.s:
-    dataset["lemma"] = [transform_and_return(talismane_data).LEMMA.values for talismane_data in parallel_talismane(data=dataset.text.values,batch_size=1000)]
+    dataset["lemma"] = lemmatize(dataset.text.values,fr_stop,lemmatizer="talismane")
     dataset["lemma"] = dataset.lemma.apply(lambda x:" ".join(x))
 #SPACY
 else:
-    try:
-        nlp = spacy.load("fr")
-    except:
-        raise ValueError("Spacy French model was not installed !")
-    extract_lemma_spacy(nlp,dataset,"text",stop_words=fr_stop) 
+    dataset["lemma"] = lemmatize(dataset.text.values,fr_stop)
 
 # SPLIT DATASET INTO TRAIN AND TEST
 X,y = dataset.lemma.values,dataset.is_transport.values

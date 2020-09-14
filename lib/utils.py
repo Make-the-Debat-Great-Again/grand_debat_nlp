@@ -9,6 +9,9 @@ from joblib import Parallel,delayed
 
 from tqdm import tqdm
 
+import spacy
+
+SPACY_MODEL=None
 
 def match_sequences(sequences_to_match, data):
     """
@@ -167,18 +170,47 @@ def parallel_talismane(data ,n_jobs = 4,batch_size=100):
     return res_final
 
 
-def extract_lemma_spacy(nlp,df,col,stop_words=[],batch_size=1000,n_threads = 8):
-  tokens = []
-  lemma = []
-  for doc in tqdm(nlp.pipe(df[col].astype('unicode').values, batch_size=batch_size,n_threads=n_threads),total = len(df)):
-      if doc.is_parsed:
-          tokens.append([n.text for n in doc if not n.text in stop_words])
-          lemma.append([n.lemma_ for n in doc if not n.lemma_ in stop_words])
-      else:
-          # We want to make sure that the lists of parsed results have the
-          # same number of entries of the original Dataframe, so add some blanks in case the parse fails
-          tokens.append(None)
-          lemma.append(None)
 
-  df['tokens'] = tokens
-  df['lemma'] = lemma
+
+def lemmatize(texts,stop_words=[],lower=True,lemmatizer="spacy",batch_size=1000,n_threads=-1):
+    global SPACY_MODEL
+    
+    def transform_and_return(df):
+        df["LEMMA"] = df.apply(lambda x : str(x.FORM).lower() if str(x.LEMMA)=="_" else str(x.LEMMA),axis=1)
+        df = df[~df.LEMMA.isin(stop_words)]
+        return df
+
+    if lemmatizer == "talismane":
+        lemmas = [transform_and_return(talismane_data).LEMMA.values for talismane_data in parallel_talismane(data=texts,batch_size=batch_size,n_jobs=n_threads)]
+    else: # spacy
+        lemmas = []
+        if not SPACY_MODEL:
+            SPACY_MODEL = spacy.load("fr")
+        for doc in tqdm(SPACY_MODEL.pipe(texts, batch_size=batch_size,n_threads=n_threads),total = len(texts)):
+            if doc.is_parsed:
+                lemmas.append([n.lemma_ for n in doc if not n.lemma_ in stop_words])
+            else:
+                lemmas.append([])
+    return lemmas
+
+
+def partofspeech(texts,stop_words=[],lower=True,lemmatizer="spacy",batch_size=1000,n_threads=-1):
+    global SPACY_MODEL
+    
+    def transform_and_return(df):
+        df["LEMMA"] = df.apply(lambda x : str(x.FORM).lower() if str(x.LEMMA)=="_" else str(x.LEMMA),axis=1)
+        df = df[~df.LEMMA.isin(stop_words)]
+        return df
+
+    if lemmatizer == "talismane":
+        pos = [transform_and_return(talismane_data).iloc[:,3].values.tolist() for talismane_data in parallel_talismane(data=texts,batch_size=batch_size,n_jobs=n_threads)]
+    else: # spacy
+        pos = []
+        if not SPACY_MODEL:
+            SPACY_MODEL = spacy.load("fr")
+        for doc in tqdm(SPACY_MODEL.pipe(texts, batch_size=batch_size,n_threads=n_threads),total = len(texts)):
+            if doc.is_parsed:
+                pos.append([[n.text,n.pos_,n.lemma_] for n in doc if not n.lemma_ in stop_words])
+            else:
+                pos.append(["","",""])
+    return np.array(pos)

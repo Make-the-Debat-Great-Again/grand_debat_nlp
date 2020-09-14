@@ -1,53 +1,38 @@
-
 import pandas as pd
-import numpy as np
-
-from .utils import parallel_talismane,call_talismane
 from .utils import match_sequences
 
 
-def get_question_with_transport_data(df,df_transport_classification,question):
+def get_question_with_transport_data(df, df_transport_classification, question):
     mask = df_transport_classification[question].astype(bool)
     return df[question][mask]
 
-def get_lemmas_from_texts(texts,batch_size=1000):
-    def transform_and_return(df):
-        df.LEMMA = df.apply(lambda x : x.FORM.lower() if x.LEMMA=="_" else x.LEMMA,axis=1)
-        return df
-    lemma = [transform_and_return(talismane_data).LEMMA.values for talismane_data in parallel_talismane(data=texts,batch_size=batch_size)]
-    return lemma
 
-def match_lexique_to_responses_texts(texts_lemmas,lexique_dataframe,return_pos=False):
-    matched_ = [match_sequences(lexique_dataframe.word.apply(str.split).values,lem) for lem in texts_lemmas]
+def match_lexique_to_responses_texts(texts_lemmas, lexique_dataframe, return_pos=False):
+    matched_ = [match_sequences(lexique_dataframe.word.apply(str.split).values, lem) for lem in texts_lemmas]
     if not return_pos:
-        matched_ = [ [mi[0] for mi in m] for m in matched_]
+        matched_ = [[mi[0] for mi in m] for m in matched_]
     return matched_
+
 
 def load_lexique(filename):
     lexique = pd.read_csv(filename)
     return lexique
 
-def get_binary_occurrence_dataframe(matching_results,lexique_dataframe):
-    N,M = len(matching_results),len(lexique_dataframe)
-    m = np.zeros((N,M))
-    for ix,mat in enumerate(matching_results):
-        m[ix][mat] = 1
-    return pd.DataFrame(m,columns=lexique_dataframe.word.values)
 
-def count_occurrences(matching_results,lexique_dataframe=None,binary=False,min_support=5,col="word"):
+def count_occurrences(matching_results, lexique_dataframe=None, binary=False, min_support=5, col="word"):
     count_ = {}
     for m in matching_results:
         visited = set([])
         for mi in m:
-            if isinstance(lexique_dataframe,pd.DataFrame):
+            if isinstance(lexique_dataframe, pd.DataFrame):
                 mi = lexique_dataframe[col].values[mi]
-            if not mi in count_:count_[mi] = 0
-            
+            if not mi in count_: count_[mi] = 0
+
             if not binary or (binary and (not mi in visited)):
                 count_[mi] += 1
                 visited.add(mi)
-    if min_support >1:
+    if min_support > 1:
         for k in list(count_.keys()):
-            if count_[k] <min_support:
+            if count_[k] < min_support:
                 del count_[k]
     return count_

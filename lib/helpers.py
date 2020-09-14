@@ -10,7 +10,6 @@ import seaborn as sns
 
 from mlxtend.frequent_patterns import apriori, association_rules
 
-from io import StringIO
 import base64
 
 
