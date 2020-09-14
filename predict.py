@@ -8,7 +8,8 @@ tqdm.pandas()
 import argparse
 import joblib
 
-from lib.utils import parallel_talismane
+from lib.utils import parallel_talismane,extract_lemma_spacy
+import spacy
 
 
 import nltk
@@ -35,11 +36,12 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument("input_dataset")
 parser.add_argument("code_dataset",type=int,help=";".join(["{0} - {1} ".format(k,v)for k,v in code_questions.items()]))
+parser.add_argument("-s",action="store_true",help="Use Spacy to lemmatize")
 
 args = parser.parse_args()#("LA_TRANSITION_ECOLOGIQUE.csv 1".split())
 
 # LOAD DATA
-df = pd.read_csv(args.input_dataset,dtype={"authorZipCode":str}).fillna("J'aime le paté.").head(100)
+df = pd.read_csv(args.input_dataset,dtype={"authorZipCode":str}).fillna("J'aime le paté.")
 QUESTIONS_INDEXES = question_col_index_to_analyse[code_questions[args.code_dataset]]
 
 
@@ -64,11 +66,18 @@ def transform_and_return(df):
     return df
 
 new_data = {}
+if args.s:
+    nlp = spacy.load("fr")
+
 for x in QUESTIONS_INDEXES:
     col = reponse_columns[x]
     print("Process the question:",col)
     print("Lemmatisation...")
-    lemma = [transform_and_return(talismane_data).LEMMA.values for talismane_data in parallel_talismane(data=df[col].values,batch_size=1000)]
+    if not args.s:
+        lemma = [transform_and_return(talismane_data).LEMMA.values for talismane_data in parallel_talismane(data=df[col].values,batch_size=1000)]
+    else:
+        extract_lemma_spacy(nlp,df,col,stop_words=[])
+        lemma = df["lemma"].values
     print("Classification...")
     new_data[col] = Parallel(n_jobs=-1,backend="multiprocessing")(delayed(classify)(x) for x in tqdm(lemma)) 
 
