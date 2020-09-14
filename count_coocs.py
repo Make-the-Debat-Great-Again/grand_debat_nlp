@@ -20,10 +20,19 @@ fr_stop = get_stop_words("french")
 import warnings
 warnings.simplefilter(action='ignore', category=pd.errors.DtypeWarning)
 
+code_questions = {
+    1:"transition_eco",
+    2:"democratie_et_citoy",
+    3:"fiscalite_et_depense_publique",
+    4:"organisation_de_etat_et_service_pub"
+}
+
 parser = argparse.ArgumentParser()
 parser.add_argument("data_fn")
 parser.add_argument("classification_result_fn")
+parser.add_argument("dataset_code",help=";".join(["{0} - {1} ".format(k,v)for k,v in code_questions.items()]))
 parser.add_argument("-s",action="store_true",help="Use Spacy to lemmatize")
+
 
 
 args = parser.parse_args()#("data/LA_TRANSITION_ECOLOGIQUE.csv data/transition_eco.csv -s".split())
@@ -37,7 +46,7 @@ df_classification = pd.read_csv(args.classification_result_fn,sep="\t",dtype={"a
 ######### IDENTIFICATION OF PATTERNS
 treatments = [ChangementAttributTransport(),ChangementTransport(),ShortPhrases()]
 final_data = []
-for question in tqdm(analysed_questions['transition_eco'][:1]):
+for question in tqdm(analysed_questions[code_questions[args.dataset_code]]):
     data_question  = get_question_with_transport_data(df_data,df_classification,question).values
     if not args.s:
         data_reponse = partofspeech(data_question,fr_stop,lemmatizer="talismane")
