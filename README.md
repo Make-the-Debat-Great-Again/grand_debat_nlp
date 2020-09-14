@@ -83,7 +83,7 @@ If counting occurrences
 
 To measure the co-occurrence patterns based on the lexicons (check the `resources/lexiques` directory), use the following command:
 
-    python3 count_coocs.py <grand_debat_dataset> <classification_result>
+    python3 count_coocs.py <grand_debat_dataset> <classification_result> <dataset_code>
 
  * <grand_debat_dataset> : CSV of a "Grand Débat National" dataset
  * <classification_result> : Results using the trained classification model on the same dataset.
