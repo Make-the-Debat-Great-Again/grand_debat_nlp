@@ -30,12 +30,12 @@ code_questions = {
 parser = argparse.ArgumentParser()
 parser.add_argument("data_fn")
 parser.add_argument("classification_result_fn")
-parser.add_argument("dataset_code",help=";".join(["{0} - {1} ".format(k,v)for k,v in code_questions.items()]))
+parser.add_argument("dataset_code",help=";".join(["{0} - {1} ".format(k,v)for k,v in code_questions.items()]),type=int)
 parser.add_argument("-s",action="store_true",help="Use Spacy to lemmatize")
 
 
 
-args = parser.parse_args()#("data/LA_TRANSITION_ECOLOGIQUE.csv data/transition_eco.csv -s".split())
+args = parser.parse_args()#("data/LA_TRANSITION_ECOLOGIQUE.csv data/transition_eco.csv 1 -s".split())
 
 
 ##### LOAD ANNOTATION AND ORIGINAL DATASET
