@@ -1,0 +1,1804 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#"
+     xml:base="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:skos1="http://www.w3.org/2008/05/skos#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:make-the-debat-great-again_transportO="urn:absolute:make-the-debat-great-again_transportO#">
+    <owl:Ontology rdf:about="urn:absolute:make-the-debat-great-again_transportO"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#object -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#object"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2008/05/skos#Concept -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2008/05/skos#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/2008/05/skos#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2008/05/skos#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2008/05/skos#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2008/05/skos#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#accueil -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#accueil">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#lieu"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#consomme -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#consomme">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estConsommePar"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#emprunte -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#emprunte">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estEmpruntePar"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estConsommePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estConsommePar">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#énergie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estEmpruntePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estEmpruntePar">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estUtilisePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estUtilisePar">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#entreprise"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2008/05/skos#altLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2008/05/skos#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2008/05/skos#prefLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2008/05/skos#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#action">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#pratique"/>
+        <skos:prefLabel>action</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#aller_en_ville -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#aller_en_ville">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#trajet_personnel"/>
+        <skos:altLabel>faire du shopping</skos:altLabel>
+        <skos:prefLabel>aller en ville</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#arrêt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#arrêt">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#infrastructure"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#accueil"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bus"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#tramway"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:altLabel>stop</skos:altLabel>
+        <skos:prefLabel>arrêt</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#arrêt_de_bus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#arrêt_de_bus">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#arrêt"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#accueil"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bus"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:prefLabel>arrêt de bus</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#arrêt_de_tramway -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#arrêt_de_tramway">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#arrêt"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#accueil"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#tramway"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:altLabel>arrêt de tram</skos:altLabel>
+        <skos:prefLabel>arrêt de tramway</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#autoroute -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#autoroute">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estEmpruntePar"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bus"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#camion"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voiture"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:altLabel>voie rapide</skos:altLabel>
+        <skos:prefLabel>autoroute</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#autostop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#autostop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#collectif"/>
+        <skos:altLabel>faire du stop</skos:altLabel>
+        <skos:prefLabel>autostop</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#avion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#avion">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#consomme"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#kérozène"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:altLabel>jet</skos:altLabel>
+        <skos:prefLabel>avion</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#aérien -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#aérien">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport"/>
+        <skos:prefLabel>aérien</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#aéroport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#aéroport">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#infrastructure"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#accueil"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#avion"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:prefLabel>aéroport</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#aéroport_de_paris -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#aéroport_de_paris">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#entreprise"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#aéroport"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#avion"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:altLabel>A.D.P.</skos:altLabel>
+        <skos:altLabel>ADP</skos:altLabel>
+        <skos:prefLabel>aéroport de paris</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#emprunte"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#canal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#port"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:altLabel>péniche</skos:altLabel>
+        <skos:prefLabel>bateau</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bioéthanol -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bioéthanol">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#renouvelable"/>
+        <skos:altLabel>E10</skos:altLabel>
+        <skos:altLabel>E100</skos:altLabel>
+        <skos:altLabel>E15</skos:altLabel>
+        <skos:altLabel>E20</skos:altLabel>
+        <skos:altLabel>E5</skos:altLabel>
+        <skos:altLabel>E7</skos:altLabel>
+        <skos:altLabel>E70</skos:altLabel>
+        <skos:altLabel>E85</skos:altLabel>
+        <skos:altLabel>E95</skos:altLabel>
+        <skos:prefLabel>bioéthanol</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#blablacar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#blablacar">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#entreprise"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gare_routière"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voiture"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:prefLabel>blablacar</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+        <skos:altLabel>autobus</skos:altLabel>
+        <skos:altLabel>navette</skos:altLabel>
+        <skos:prefLabel>bus</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bus_de_ville -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bus_de_ville">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bus"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#emprunte"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie_de_bus"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#arrêt_de_bus"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne_de_bus"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:prefLabel>bus de ville</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#camion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#camion">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#emprunte"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#route"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:altLabel>poids lourd</skos:altLabel>
+        <skos:altLabel>semi-remorque</skos:altLabel>
+        <skos:prefLabel>camion</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#canal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#canal">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estEmpruntePar"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:altLabel>chenal</skos:altLabel>
+        <skos:prefLabel>canal</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#circuit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#circuit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#réseau"/>
+        <skos:prefLabel>circuit</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#client -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#client">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilisateur"/>
+        <skos:prefLabel>client</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#collectif -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#collectif">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport"/>
+        <skos:prefLabel>collectif</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#conducteur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#conducteur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilisateur"/>
+        <skos:altLabel>chauffeur</skos:altLabel>
+        <skos:prefLabel>conducteur</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#covoiturage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#covoiturage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#collectif"/>
+        <skos:altLabel>co-voit&apos;</skos:altLabel>
+        <skos:altLabel>covoit</skos:altLabel>
+        <skos:prefLabel>covoiturage</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#diesel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#diesel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#hydrocarbure"/>
+        <skos:altLabel>B7</skos:altLabel>
+        <skos:prefLabel>diesel</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#déplacement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#déplacement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#action"/>
+        <skos:prefLabel>déplacement</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#entreprise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#entreprise">
+        <skos:altLabel>compagnie</skos:altLabel>
+        <skos:prefLabel>entreprise</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#essence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#essence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#hydrocarbure"/>
+        <skos:altLabel>SP95</skos:altLabel>
+        <skos:altLabel>SP95-E10</skos:altLabel>
+        <skos:altLabel>SP98</skos:altLabel>
+        <skos:prefLabel>essence</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#faire_du_tourisme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#faire_du_tourisme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voyage"/>
+        <skos:prefLabel>faire du tourisme</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#faire_un_voyage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#faire_un_voyage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voyage"/>
+        <skos:altLabel>voyager</skos:altLabel>
+        <skos:prefLabel>faire un voyage</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ferroviaire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ferroviaire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport"/>
+        <skos:prefLabel>ferroviaire</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#flixbus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#flixbus">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#entreprise"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gare_routière"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bus"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:prefLabel>flixbus</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#fossile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#fossile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#énergie"/>
+        <skos:altLabel>non renouvelable</skos:altLabel>
+        <skos:prefLabel>fossile</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gare -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gare">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#infrastructure"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#accueil"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:prefLabel>gare</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gare_ferroviaire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gare_ferroviaire">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gare"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#accueil"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#train"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:altLabel>gare de train</skos:altLabel>
+        <skos:prefLabel>gare ferroviaire</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gare_routière -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gare_routière">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gare"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#accueil"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bus"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voiture"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:prefLabel>gare routière</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gaz -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gaz">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#fossile"/>
+        <skos:prefLabel>gaz</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#hydrocarbure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#hydrocarbure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#fossile"/>
+        <skos:prefLabel>hydrocarbure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#individuel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#individuel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport"/>
+        <skos:prefLabel>individuel</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#infrastructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#infrastructure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#lieu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#kérozène -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#kérozène">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#hydrocarbure"/>
+        <skos:prefLabel>kérozène</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#lieu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#lieu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#réseau"/>
+        <skos:prefLabel>lieu</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#réseau"/>
+        <skos:prefLabel>ligne</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne_de_bus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne_de_bus">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estEmpruntePar"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bus"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:prefLabel>ligne de bus</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne_de_train -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne_de_train">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estEmpruntePar"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#train"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:altLabel>ligne ferroviaire</skos:altLabel>
+        <skos:prefLabel>ligne de train</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne_de_tramway -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne_de_tramway">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estEmpruntePar"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#tramway"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:altLabel>ligne de tram</skos:altLabel>
+        <skos:prefLabel>ligne de tramway</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#marchand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#marchand">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport"/>
+        <skos:altLabel>fret</skos:altLabel>
+        <skos:prefLabel>marchand</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#marche -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#marche">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#action"/>
+        <skos:prefLabel>marche</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#marcher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#marcher">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#marche"/>
+        <skos:prefLabel>marcher</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ouibus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ouibus">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#entreprise"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gare_routière"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bus"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:prefLabel>ouibus</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ouigo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ouigo">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#entreprise"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gare_ferroviaire"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#train"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:prefLabel>ouigo</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#passager -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#passager">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilisateur"/>
+        <skos:prefLabel>passager</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#petite_ligne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#petite_ligne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne"/>
+        <skos:prefLabel>petite ligne</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#port -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#port">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#infrastructure"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#accueil"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:prefLabel>port</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#pratique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#pratique"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#privé -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#privé">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport"/>
+        <skos:prefLabel>privé</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#publique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#publique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport"/>
+        <skos:prefLabel>publique</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#pédaler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#pédaler">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#déplacement"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#vélo"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:prefLabel>pédaler</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#renouvelable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#renouvelable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#énergie"/>
+        <skos:prefLabel>renouvelable</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#rouler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#rouler">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#déplacement"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#camion"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#trotinette"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voiture"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#vélo"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:prefLabel>rouler</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#route -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#route">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estEmpruntePar"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bus"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#camion"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#trotinette"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voiture"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#vélo"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:prefLabel>route</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#routier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#routier">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#route"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:prefLabel>routier</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#rue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#rue">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estEmpruntePar"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#trotinette"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voiture"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#vélo"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:altLabel>avenue</skos:altLabel>
+        <skos:altLabel>boulevard</skos:altLabel>
+        <skos:prefLabel>rue</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#réseau -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#réseau">
+        <skos:prefLabel>réseau</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#se_déplacer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#se_déplacer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#déplacement"/>
+        <skos:prefLabel>se déplacer</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#sncf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#sncf">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#entreprise"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gare_ferroviaire"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#train"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:altLabel>S.N.C.F.</skos:altLabel>
+        <skos:prefLabel>sncf</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#station -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#station">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#infrastructure"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#accueil"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bus"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#tramway"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:prefLabel>station</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#train"/>
+        <skos:prefLabel>ter</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#tgv -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#tgv">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#train"/>
+        <skos:prefLabel>tgv</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#train -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#train">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gare_ferroviaire"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:prefLabel>train</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#trajet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#trajet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#action"/>
+        <skos:prefLabel>trajet</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#trajet_professionnel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#trajet_professionnel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#trajet"/>
+        <skos:altLabel>déplacement profesionnel</skos:altLabel>
+        <skos:prefLabel>trajet professionnel</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#tramway -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#tramway">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#emprunte"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie_de_tramway"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#arrêt_de_tramway"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne_de_tramway"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#pratique"/>
+        <skos:prefLabel>transport</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#trotinette -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#trotinette">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+        <skos:prefLabel>trotinette</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#usager -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#usager">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilisateur"/>
+        <skos:prefLabel>usager</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilisateur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilisateur">
+        <skos:prefLabel>utilisateur</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#lieu"/>
+        <skos:prefLabel>voie</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie_cyclable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie_cyclable">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estEmpruntePar"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#vélo"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:altLabel>bande cyclable</skos:altLabel>
+        <skos:altLabel>piste cyclable</skos:altLabel>
+        <skos:altLabel>véloroute</skos:altLabel>
+        <skos:prefLabel>voie cyclable</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie_de_bus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie_de_bus">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estEmpruntePar"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bus"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:prefLabel>voie de bus</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie_de_chemin_de_fer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie_de_chemin_de_fer">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estEmpruntePar"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#train"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:altLabel>LGV</skos:altLabel>
+        <skos:altLabel>voie ferrée</skos:altLabel>
+        <skos:prefLabel>voie de chemin de fer</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie_de_tramway -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie_de_tramway">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estEmpruntePar"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#tramway"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:altLabel>voie de tram</skos:altLabel>
+        <skos:prefLabel>voie de tramway</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voiture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voiture">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#emprunte"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#route"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voiture_hybride -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voiture_hybride">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voiture"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#consomme"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#fossile"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#renouvelable"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:prefLabel>voiture hybride</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voiture_électrique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voiture_électrique">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voiture"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#consomme"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#électricité"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:prefLabel>voiture électrique</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voyage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voyage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#action"/>
+        <skos:prefLabel>voyage</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule">
+        <skos:prefLabel>véhicule</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#vélo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#vélo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+        <skos:altLabel>VTC</skos:altLabel>
+        <skos:altLabel>VTT</skos:altLabel>
+        <skos:altLabel>bicyclette</skos:altLabel>
+        <skos:altLabel>petite reine</skos:altLabel>
+        <skos:altLabel>vélo de route</skos:altLabel>
+        <skos:altLabel>vélocypède</skos:altLabel>
+        <skos:prefLabel>vélo</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#électricité -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#électricité">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#énergie"/>
+        <skos:prefLabel>électricité</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#énergie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#énergie">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <skos:prefLabel>énergie</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#autocar -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#autocar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+        <skos:altLabel>car</skos:altLabel>
+        <skos:prefLabel>autocar</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#chemin -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#chemin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie"/>
+        <skos:prefLabel>chemin</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#circuler -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#circuler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#déplacement"/>
+        <skos:prefLabel>circuler</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#cyclomoteur -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#cyclomoteur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+        <skos:altLabel>deux roues</skos:altLabel>
+        <skos:prefLabel>cyclomoteur</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#faire_les_courses -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#faire_les_courses">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#trajet_personnel"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#fauteuil_roulant -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#fauteuil_roulant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+        <skos:prefLabel>fauteuil roulant</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#ferroutage -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#ferroutage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ferroviaire"/>
+        <skos:prefLabel>ferroutage</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#gaz_de_pétrole_liquéfié -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#gaz_de_pétrole_liquéfié">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gaz"/>
+        <skos:altLabel>GPL</skos:altLabel>
+        <skos:prefLabel>gaz de pétrole liquéfié</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#hydrogène -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#hydrogène">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#énergie"/>
+        <skos:prefLabel>hydrogène</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#intercité -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#intercité">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ferroviaire"/>
+        <skos:prefLabel>intercité</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#mobylette -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#mobylette">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#cyclomoteur"/>
+        <skos:altLabel>mob</skos:altLabel>
+        <skos:prefLabel>mobylette</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#motard -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#motard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilisateur"/>
+        <skos:prefLabel>motard</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#motocyclette -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#motocyclette">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#cyclomoteur"/>
+        <skos:altLabel>moto</skos:altLabel>
+        <skos:prefLabel>motocyclette</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#parking -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#parking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#infrastructure"/>
+        <skos:altLabel>stationnement</skos:altLabel>
+        <skos:prefLabel>parking</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#parking_relais -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#parking_relais">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#parking"/>
+        <skos:prefLabel>parking relais</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#parking_à_vélos -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#parking_à_vélos">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#parking"/>
+        <skos:altLabel>abri à vélos</skos:altLabel>
+        <skos:prefLabel>parking à vélos</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#périphérique -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#périphérique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie"/>
+        <skos:altLabel>périph</skos:altLabel>
+        <skos:prefLabel>périphérique</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#rue_piétonne -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#rue_piétonne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#rue"/>
+        <skos:prefLabel>rue piétonne</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#scooter -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#scooter">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#cyclomoteur"/>
+        <skos:prefLabel>scooter</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#solex -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#solex">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#cyclomoteur"/>
+        <skos:prefLabel>solex</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#train_corail -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#train_corail">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#train"/>
+        <skos:prefLabel>train corail</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#trajet_personnel -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#trajet_personnel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#trajet"/>
+        <skos:altLabel>déplacement personnel</skos:altLabel>
+        <skos:prefLabel>trajet personnel</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#voiture_thermique -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#voiture_thermique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voiture"/>
+        <skos:altLabel>voiture essence</skos:altLabel>
+        <skos:prefLabel>voiture thermique</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#vélo_électrique -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#vélo_électrique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#vélo"/>
+        <skos:altLabel>VAE</skos:altLabel>
+        <skos:altLabel>vélo à assistance électrique</skos:altLabel>
+        <skos:prefLabel>vélo électrique</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#tramway -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#tramway">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voiture -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voiture">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#tramway">
+        <skos:prefLabel xml:lang="fr">tramway</skos:prefLabel>
+        <skos:altLabel xml:lang="fr">tram</skos:altLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voiture">
+        <skos:altLabel xml:lang="fr">caisse</skos:altLabel>
+        <skos:altLabel>tacot</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">voiture</skos:prefLabel>
+        <skos:altLabel xml:lang="fr">bagnole</skos:altLabel>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

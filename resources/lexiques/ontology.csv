@@ -1,0 +1,115 @@
+	prefLabel	altLabel
+0	action	
+1	aller en ville	faire du shopping
+2	arrêt	stop
+3	arrêt de bus	
+4	arrêt de tramway	arrêt de tram
+5	autoroute	voie rapide
+6	autostop	faire du stop
+7	avion	jet
+8	aérien	
+9	aéroport	
+10	aéroport de paris	ADP|A.D.P.
+11	bateau	péniche
+12	bioéthanol	E100|E15|E10|E20|E85|E7|E95|E5|E70
+13	blablacar	
+14	bus	autobus|navette
+15	bus de ville	
+16	camion	semi-remorque|poids lourd
+17	canal	chenal
+18	circuit	
+19	client	
+20	collectif	
+21	conducteur	chauffeur
+22	covoiturage	covoit|co-voit
+23	diesel	B7
+24	déplacement	
+25	entreprise	compagnie
+26	essence	SP95|SP98|SP95-E10
+27	faire du tourisme	
+28	faire un voyage	voyager
+29	ferroviaire	
+30	flixbus	
+31	fossile	non renouvelable
+32	gare	
+33	gare ferroviaire	gare de train
+34	gare routière	
+35	gaz	
+36	hydrocarbure	
+37	individuel	
+38		
+39	kérozène	
+40	lieu	
+41	ligne	
+42	ligne de bus	
+43	ligne de train	ligne ferroviaire
+44	ligne de tramway	ligne de tram
+45	marchand	fret
+46	marche	
+47	marcher	
+48	ouibus	
+49	ouigo	
+50	passager	
+51	petite ligne	
+52	port	
+53		
+54	privé	
+55	publique	
+56	pédaler	
+57	renouvelable	
+58	rouler	
+59	route	
+60	routier	
+61	rue	avenue|boulevard
+62	réseau	
+63	se déplacer	
+64	sncf	S.N.C.F.
+65	station	
+66	ter	
+67	tgv	
+68	train	
+69	trajet	
+70	trajet professionnel	déplacement profesionnel
+71	tramway	tram
+72	transport	
+73	trotinette	
+74	usager	
+75	utilisateur	
+76	voie	
+77	voie cyclable	bande cyclable|piste cyclable|véloroute
+78	voie de bus	
+79	voie de chemin de fer	voie ferrée|LGV
+80	voie de tramway	voie de tram
+81	voiture	caisse|tacot|bagnole
+82	voiture hybride	
+83	voiture électrique	
+84	voyage	
+85	véhicule	
+86	vélo	petite reine|bicyclette|VTT|vélo de route|vélocypède|VTC
+87	électricité	
+88	énergie	
+89		
+90	autocar	car
+91	chemin	
+92	circuler	
+93	cyclomoteur	deux roues
+94		
+95	fauteuil roulant	
+96	ferroutage	
+97	gaz de pétrole liquéfié	GPL
+98	hydrogène	
+99	intercité	
+100	mobylette	mob
+101	motard	
+102	motocyclette	moto
+103	parking	stationnement
+104	parking relais	
+105	parking à vélos	abri à vélos
+106	périphérique	périph
+107	rue piétonne	
+108	scooter	
+109	solex	
+110	train corail	
+111	trajet personnel	déplacement personnel
+112	voiture thermique	voiture essence
+113	vélo électrique	VAE|vélo à assistance électrique
