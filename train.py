@@ -13,9 +13,22 @@ from keras.preprocessing.text import Tokenizer
 from lib.utils import lemmatize
 
 # ML
-from sklearn import svm
-from sklearn.model_selection import train_test_split
+# MACHINE LEARNING
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.svm import SVC
+from sklearn.linear_model import SGDClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.ensemble import RandomForestClassifier
+
 from sklearn.model_selection import GridSearchCV
+
+# ML HELPERS
+from sklearn import preprocessing
+from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 
 #PROGRESS BAR
@@ -25,6 +38,26 @@ import joblib
 
 # CUSTOM
 from lib.constant import *
+
+
+classifier_dict = {
+    "naive-bayes":MultinomialNB(),
+    "svm":SVC(kernel="rbf"),
+    "sgd":SGDClassifier(),
+    "knn":KNeighborsClassifier(),
+    "decision-tree": DecisionTreeClassifier(),
+    "random-forest":RandomForestClassifier()
+}
+
+parameters = {
+    "naive-bayes":[{"alpha":[0,1]}],
+    "svm":[{"kernel":["rbf","poly"], 'gamma': [1e-1,1e-2,1e-3, 1,10,100]}],
+    "sgd":[{"penalty":["l1","l2"],"loss":["hinge","modified_huber","log"]}],
+    "knn":[{"n_neighbors":list(range(4,8)),"p":[1,2]}],
+    "decision-tree": [{"criterion":["gini","entropy"]}],
+    "random-forest":[{"criterion":["gini","entropy"],"n_estimators":[10,50,100]}]
+}
+
 
 parser = argparse.ArgumentParser()
 parser.add_argument("data_transition_eco_fn",help="Official CSV file for the Transition Ecologique")#,default="data/LA_TRANSITION_ECOLOGIQUE.csv")
@@ -102,84 +135,105 @@ else:
     dataset["lemma"] = lemmatize(dataset.text.values,fr_stop)
 
 # SPLIT DATASET INTO TRAIN AND TEST
-X,y = dataset.lemma.values,dataset.is_transport.values
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42) # Split train/test
+X,y = [" ".join(x) for x in dataset.lemma.values],dataset.is_transport.values
 
-# BUILD A TOKENIZER
-max_words = 10000
-tokenizer = Tokenizer(num_words=max_words)
-tokenizer.fit_on_texts(np.concatenate((X_train,X_test)))
-
-# PARSE INPUT TEXT TO BAGOFWORDS REPRESENTATION
-X_train = tokenizer.texts_to_sequences(X_train)
-X_test = tokenizer.texts_to_sequences(X_test)
-X_train = tokenizer.sequences_to_matrix(X_train, mode='binary')
-X_test = tokenizer.sequences_to_matrix(X_test, mode='binary')
-
-
+data_vectorizer = Pipeline([
+    ('vect', CountVectorizer()),
+    ('tfidf', TfidfTransformer()),
+])
+data_vectorizer.fit(X)
+X_train,X_test,y_train,y_test = train_test_split(X,y)
+X_train = data_vectorizer.transform(X_train)
+X_test = data_vectorizer.transform(X_test)
 
 ########################################################################################
 ################################### TRAIN THE MODEL ####################################
 ########################################################################################
 print("Train Classifier...")
+
 if args.o: # train the model using optimal parameters
-    clf = svm.SVC(gamma=0.01,kernel="rbf")
+    clf = MultinomialNB(alpha=1)
     clf.fit(X_train, y_train)
-    joblib.dump(clf,filename="resources/classification_model/classifier_svm.dump")
-    joblib.dump(tokenizer,filename="resources/classification_model/tokenizer.dump")
-
+    joblib.dump(clf,filename="resources/classification_model/classifier_multinomialnb.dump")
+    joblib.dump(data_vectorizer,filename="resources/classification_model/vectorizer.dump")
 else:
-    tuned_parameters = [{'kernel': ['rbf'], 'gamma': [1e-1,1e-2,1e-3, 1,10,100]}]
-    clf = GridSearchCV(
-            svm.SVC(), tuned_parameters, scoring='f1',verbose=10,n_jobs=-1
-        )
-    clf.fit(X_train, y_train)
-
-    print("Best parameters set found on development set:")
-    print()
-    print(clf.best_params_)
-    print()
-    print("Grid scores on development set:")
-    print()
-    means = clf.cv_results_['mean_test_score']
-    stds = clf.cv_results_['std_test_score']
-    for mean, std, params in zip(means, stds, clf.cv_results_['params']):
-        print("%0.3f (+/-%0.03f) for %r"
-                % (mean, std * 2, params))
-    print()
-
-    print("Detailed classification report:")
-    print()
-    print("The model is trained on the full development set.")
-    print("The scores are computed on the full evaluation set.")
-    print()
-    y_true, y_pred = y_test, clf.predict(X_test)
-    print(classification_report(y_true, y_pred))
+    for CLASSIFIER in classifier_dict:
+        print("TRAIN AND EVAL {0}".format(CLASSIFIER))
+        clf = GridSearchCV(
+                classifier_dict[CLASSIFIER], parameters[CLASSIFIER], scoring='f1_weighted',n_jobs=-1
+            )
+        clf.fit(X_train, y_train)
+        print("Best Parameters : ",clf.best_params_)
+        y_pred = clf.best_estimator_.predict(X_test)
+        print(classification_report(y_test,y_pred))
 
 
-    ########################################################################################
-    #################################### SAVE THE MODEL ####################################
-    ########################################################################################
-
-    joblib.dump(clf.best_estimator_,filename="resources/classification_model/classifier_svm.dump")
-    joblib.dump(tokenizer,filename="resources/classification_model/tokenizer.dump")
 
 
-# RESULTS
-# Best parameters set found on development set:
 
-# {'gamma': 0.01, 'kernel': 'rbf'}
 
-# Grid scores on development set:
+# TRAIN AND EVAL naive-bayes
+# Best Parameters :  {'alpha': 1}
+#               precision    recall  f1-score   support
 
-# 0.820 (+/-0.013) for {'gamma': 0.1, 'kernel': 'rbf'}
-# 0.830 (+/-0.013) for {'gamma': 0.01, 'kernel': 'rbf'}
-# 0.768 (+/-0.035) for {'gamma': 0.001, 'kernel': 'rbf'}
-# 0.650 (+/-0.036) for {'gamma': 1, 'kernel': 'rbf'}
-# 0.549 (+/-0.032) for {'gamma': 10, 'kernel': 'rbf'}
-# 0.549 (+/-0.032) for {'gamma': 100, 'kernel': 'rbf'}
+#            0       0.83      0.92      0.88      1752
+#            1       0.91      0.80      0.85      1655
 
-# Detailed classification report:
+#     accuracy                           0.87      3407
+#    macro avg       0.87      0.86      0.86      3407
+# weighted avg       0.87      0.87      0.86      3407
 
-# The model is trained on the full development set.
-# The scores are computed on the full evaluation set.
+# TRAIN AND EVAL svm
+# Best Parameters :  {'gamma': 0.1, 'kernel': 'rbf'}
+#               precision    recall  f1-score   support
+
+#            0       0.82      0.92      0.87      1752
+#            1       0.90      0.79      0.84      1655
+
+#     accuracy                           0.86      3407
+#    macro avg       0.86      0.85      0.85      3407
+# weighted avg       0.86      0.86      0.85      3407
+
+# TRAIN AND EVAL sgd
+# Best Parameters :  {'loss': 'log', 'penalty': 'l1'}
+#               precision    recall  f1-score   support
+
+#            0       0.84      0.90      0.87      1752
+#            1       0.89      0.82      0.85      1655
+
+#     accuracy                           0.86      3407
+#    macro avg       0.87      0.86      0.86      3407
+# weighted avg       0.86      0.86      0.86      3407
+
+# TRAIN AND EVAL knn
+# Best Parameters :  {'n_neighbors': 5, 'p': 2}
+#               precision    recall  f1-score   support
+
+#            0       0.69      0.99      0.81      1752
+#            1       0.97      0.53      0.68      1655
+
+#     accuracy                           0.76      3407
+#    macro avg       0.83      0.76      0.75      3407
+# weighted avg       0.83      0.76      0.75      3407
+
+# TRAIN AND EVAL decision-tree
+# Best Parameters :  {'criterion': 'gini'}
+#               precision    recall  f1-score   support
+
+#            0       0.81      0.88      0.84      1752
+#            1       0.86      0.78      0.82      1655
+
+#     accuracy                           0.83      3407
+#    macro avg       0.84      0.83      0.83      3407
+# weighted avg       0.84      0.83      0.83      3407
+
+# TRAIN AND EVAL random-forest
+# Best Parameters :  {'criterion': 'entropy', 'n_estimators': 100}
+#               precision    recall  f1-score   support
+
+#            0       0.82      0.88      0.85      1752
+#            1       0.86      0.80      0.83      1655
+
+#     accuracy                           0.84      3407
+#    macro avg       0.84      0.84      0.84      3407
+# weighted avg       0.84      0.84      0.84      3407

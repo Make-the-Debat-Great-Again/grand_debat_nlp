@@ -43,17 +43,18 @@ QUESTIONS_INDEXES = question_col_index_to_analyse[code_questions[args.code_datas
 
 
 # LOAD CLASSIFIER
-clf = load("./resources/classification_model/classifier_svm.dump")
-tokenizer = load("./resources/classification_model/tokenizer.dump")
-
+# clf = load("./resources/classification_model/classifier_svm.dump")
+clf = load("./resources/classification_model/classifier_multinomialnb.dump")
+#tokenizer = load("./resources/classification_model/tokenizer.dump")
+data_vectorizer = load("./resources/classification_model/vectorizer.dump")
 def classify(x):
     if len(x)<1:
         return 0
-    #print(x)
-    x = tokenizer.sequences_to_matrix(
-        tokenizer.texts_to_sequences(
-            [" ".join(x)])
-        ,mode = "binary")
+    # x = tokenizer.sequences_to_matrix(
+    #     tokenizer.texts_to_sequences(
+    #         [" ".join(x)])
+    #     ,mode = "binary")
+    x = data_vectorizer.transform(x)
     return clf.predict(x)[0]
 
 reponse_columns = df.columns[11:]
