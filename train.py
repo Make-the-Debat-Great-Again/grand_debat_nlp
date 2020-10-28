@@ -137,6 +137,7 @@ else:
 # SPLIT DATASET INTO TRAIN AND TEST
 X,y = [" ".join(x) for x in dataset.lemma.values],dataset.is_transport.values
 
+
 data_vectorizer = Pipeline([
     ('vect', CountVectorizer()),
     ('tfidf', TfidfTransformer()),
