@@ -44,7 +44,7 @@ df_classification = pd.read_csv(args.classification_result_fn,sep="\t",dtype={"a
 
 
 ######### IDENTIFICATION OF PATTERNS
-treatments = [ChangementAttributTransport(),ChangementTransport(),ShortPhrases()]
+treatments = [ChangementAttributTransport(),ChangementTransport()]
 final_data = []
 for question in tqdm(analysed_questions[code_questions[args.dataset_code]]):
     data_question  = get_question_with_transport_data(df_data,df_classification,question).values
