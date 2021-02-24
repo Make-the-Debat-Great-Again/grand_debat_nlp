@@ -22,6 +22,7 @@ index_pattern = {
 parser = argparse.ArgumentParser()
 parser.add_argument("dataset_code",choices=list(question_patterns.keys()))
 parser.add_argument("dataset_fn")
+parser.add_argument("-n","--n-process",default=1,type=int)
 
 args= parser.parse_args()
 
@@ -34,7 +35,7 @@ nlp = spacy.load("fr_core_news_lg")
 nlp.add_pipe("merge_noun_chunks")
 
 # DATA
-df_data = pd.read_csv(args.dataset_fn, dtype={"authorZipCode": str}).fillna("").head(1000)
+df_data = pd.read_csv(args.dataset_fn, dtype={"authorZipCode": str}).fillna("")
 
 # PREPARE MATCHER
 matcher = DependencyMatcher(nlp.vocab)
@@ -51,7 +52,7 @@ for question, pattern_idx in question_patterns[args.dataset_code].items():
     id_ = df_data["id"].values
     zipCode = df_data["authorZipCode"].values
     data_question = df_data[question].values
-    for ix, doc in tqdm(enumerate(nlp.pipe(data_question)), total=len(data_question)):
+    for ix, doc in tqdm(enumerate(nlp.pipe(data_question,n_process=args.n_process)), total=len(data_question)):
         question_res = []
         #response = nlp(doc)
         response = doc
