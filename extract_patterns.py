@@ -9,6 +9,7 @@ from lib.constant import analysed_questions,question_patterns
 from spacy.matcher import DependencyMatcher
 from pattern import enjeux
 import json
+import os
 import argparse
 
 index_pattern = {
@@ -24,13 +25,16 @@ parser.add_argument("dataset_fn")
 
 args= parser.parse_args()
 
+output_dir = os.path.join("./","output_{0}".format(args.dataset_code))
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
 
 # INIT SPACY MODEL
 nlp = spacy.load("fr_core_news_lg")
 nlp.add_pipe("merge_noun_chunks")
 
 # DATA
-df_data = pd.read_csv(args.dataset_fn, dtype={"authorZipCode": str}).fillna("")
+df_data = pd.read_csv(args.dataset_fn, dtype={"authorZipCode": str}).fillna("").head(1000)
 
 # PREPARE MATCHER
 matcher = DependencyMatcher(nlp.vocab)
@@ -65,4 +69,4 @@ for question, pattern_idx in question_patterns[args.dataset_code].items():
                                                       nlp.vocab.strings[ma[0]].split("|")[0] == "OBSERVATION"]))
                 question_res.append(found)
             results.append([id_[ix], zipCode[ix], question_res])
-    json.dump(results, open(question.split(" - ")[0] + ".json", 'w'))
+    json.dump(results, open(output_dir+"/"+question.split(" - ")[0] + ".json", 'w'))
