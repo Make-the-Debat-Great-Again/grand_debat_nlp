@@ -69,5 +69,5 @@ for question, pattern_idx in question_patterns[args.dataset_code].items():
                                                      [ma for ma in matches if
                                                       nlp.vocab.strings[ma[0]].split("|")[0] == "OBSERVATION"]))
                 question_res.append(found)
-            results.append([id_[ix], zipCode[ix], question_res])
+            results.append([id_[ix], zipCode[ix], question_res,data_question[ix]])
     json.dump(results, open(output_dir+"/"+question.split(" - ")[0] + ".json", 'w'))
