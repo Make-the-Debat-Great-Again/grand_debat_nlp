@@ -62,7 +62,7 @@ class Proposition(Pattern):
                 "LEFT_ID": "verbe",
                 "REL_OP": "<",
                 "RIGHT_ID": "verbe2",
-                "RIGHT_ATTRS": {"POS": "VERB", "dep": "ROOT"}
+                "RIGHT_ATTRS": {"POS": "VERB", "DEP": "ROOT"}
             }
         ],
             "pat_acteur_verbx2_obj": [ # Les entreprises doivent payer leur impot
@@ -80,13 +80,13 @@ class Proposition(Pattern):
                     "LEFT_ID": "verbe",
                     "REL_OP": "<",
                     "RIGHT_ID": "verbe2",
-                    "RIGHT_ATTRS": {"POS": "VERB", "dep": "ROOT"}
+                    "RIGHT_ATTRS": {"POS": "VERB", "DEP": "ROOT"}
                 },
                 {
                     "LEFT_ID": "verbe2",
                     "REL_OP": ">",
                     "RIGHT_ID": "acteur",
-                    "RIGHT_ATTRS": {"POS": "NOUN", "dep": "nsubj"}
+                    "RIGHT_ATTRS": {"POS": "NOUN", "DEP": "nsubj"}
                 }
             ],
             "pat_sujet_verb":[ # Augmenter les impots
@@ -98,7 +98,7 @@ class Proposition(Pattern):
                 "LEFT_ID": "objet",
                 "REL_OP": "<",
                 "RIGHT_ID": "verbe",
-                "RIGHT_ATTRS": {"POS": "VERB", "dep": "ROOT"}
+                "RIGHT_ATTRS": {"POS": "VERB", "DEP": "ROOT"}
             }],
 
             "pat_adv_sujet": [ # Plus d'impots
@@ -133,7 +133,7 @@ class Proposition(Pattern):
                     "LEFT_ID": "verbe2",
                     "REL_OP": ">",
                     "RIGHT_ID": "acteur",
-                    "RIGHT_ATTRS": {"POS": "NOUN", "dep": "obj"}
+                    "RIGHT_ATTRS": {"POS": "NOUN", "DEP": "obj"}
                 }
             ],
         }
