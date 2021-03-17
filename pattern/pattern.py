@@ -19,10 +19,12 @@ class Pattern():
         for match in matches:
             if self.is_valid(doc, match):
                 key_match = doc.vocab.strings[match[0]].split("|")[-1]
+
                 res = {}
                 for ix, id_ in enumerate(match[1]):
                     res[patterns[key_match][ix]["RIGHT_ID"]] = doc[id_].text
                 res["type"] = self.__class__.__name__
+                res["pattern_name"]=key_match
                 results.append(res)
         return results
 
