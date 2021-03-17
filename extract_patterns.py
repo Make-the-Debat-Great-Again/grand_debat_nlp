@@ -37,7 +37,7 @@ nlp = spacy.load("fr_core_news_lg")
 nlp.add_pipe("merge_noun_chunks")
 
 # DATA
-df_data = pd.read_csv(args.dataset_fn, dtype={"authorZipCode": str}).fillna("").head(2000)
+df_data = pd.read_csv(args.dataset_fn, dtype={"authorZipCode": str}).fillna("")
 
 # PREPARE MATCHER
 matcher = DependencyMatcher(nlp.vocab)
