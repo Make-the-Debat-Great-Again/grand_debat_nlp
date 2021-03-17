@@ -207,10 +207,46 @@ def partofspeech(texts,stop_words=[],lower=True,lemmatizer="spacy",batch_size=10
     else: # spacy
         pos = []
         if not SPACY_MODEL:
-            SPACY_MODEL = spacy.load("fr")
-        for doc in tqdm(SPACY_MODEL.pipe(texts, batch_size=batch_size,n_threads=n_threads),total = len(texts)):
+            SPACY_MODEL = spacy.load("fr_core_news_sm")
+        for doc in tqdm(SPACY_MODEL.pipe(texts, batch_size=batch_size,n_process=n_threads),total = len(texts)):
             if doc.is_parsed:
                 pos.append([[n.text,n.pos_,n.lemma_] for n in doc if not n.lemma_ in stop_words])
             else:
                 pos.append(["","",""])
     return np.array(pos)
+
+
+def singularize(word, pos="NOUN", custom={"pays":"pays"}):
+    if word in custom:
+        return custom[word]
+    w = word.lower()
+    # Common articles, determiners, pronouns:
+    if pos in ("DT", "PRP", "PRP$", "WP", "RB", "IN"):
+        if w == "du" : return "de"
+        if w == "ces": return "ce"
+        if w == "les": return "le"
+        if w == "des": return "un"
+        if w == "mes": return "mon"
+        if w == "ses": return "son"
+        if w == "tes": return "ton"
+        if w == "nos": return "notre"
+        if w == "vos": return "votre"
+        if w.endswith(("'", u"’")):
+            return w[:-1] + "e"
+    if w.endswith("nnes"):  # parisiennes => parisien
+        return w[:-3]
+    if w.endswith("ntes"):  # passantes => passant
+        return w[:-2]
+    if w.endswith("euses"): # danseuses => danseur
+        return w[:-3] + "r"
+    if w.endswith("s"):
+        return w[:-1]
+    if w.endswith(("aux", "eux", "oux")):
+        return w[:-1]
+    if w.endswith("ii"):
+        return w[:-1] + "o"
+    if w.endswith(("ia", "ma")):
+        return w[:-1] + "um"
+    if "-" in w:
+        return singularize(w.split("-")[0]) + "-" + "-".join(w.split("-")[1:])
+    return w
