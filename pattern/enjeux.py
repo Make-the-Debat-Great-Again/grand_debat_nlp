@@ -65,7 +65,7 @@ class Proposition(Pattern):
                 "RIGHT_ATTRS": {"POS": "VERB", "DEP": "ROOT"}
             }
         ],
-            "pat_acteur_verbx2_obj": [ # Les entreprises doivent payer leur impot
+            "pat_actor_do_action_on_target": [ # Les entreprises doivent payer leur impot
                 {
                     "RIGHT_ID": "objet",
                     "RIGHT_ATTRS": {"POS": "NOUN", "DEP": {"IN": ["obj"]}}
@@ -111,33 +111,9 @@ class Proposition(Pattern):
                     "REL_OP": ">",
                     "RIGHT_ID": "adverbe",
                     "RIGHT_ATTRS": {"POS": "ADV", "LEMMA": {"IN": ["plus","moins"]}}
-                }],
-            "pat_actor_do_action_on_target": [  # Les entreprises doivent payer leur impot
-                {
-                    "RIGHT_ID": "objet",
-                    "RIGHT_ATTRS": {"POS": "NOUN", "DEP": {"IN": ["obj"]}}
-                },
-                {
-                    "LEFT_ID": "objet",
-                    "REL_OP": "<",
-                    "RIGHT_ID": "verbe",
-                    "RIGHT_ATTRS": {"POS": "VERB", "DEP": "xcomp"}
-                },
-                {
-                    "LEFT_ID": "verbe",
-                    "REL_OP": "<",
-                    "RIGHT_ID": "verbe2",
-                    "RIGHT_ATTRS": {"POS": "VERB",}
-                },
-                {
-                    "LEFT_ID": "verbe2",
-                    "REL_OP": ">",
-                    "RIGHT_ID": "acteur",
-                    "RIGHT_ATTRS": {"POS": "NOUN", "DEP": "obj"}
-                }
-            ],
+                }]
         }
-        left_id={"pat_sujet_verb":"verbe","pat_sujet_verbx2":"verbe2","pat_adv_sujet":"adverbe","pat_acteur_verbx2_obj":"verbe2","pat_actor_do_action_on_target":"verbe2"}
+        left_id={"pat_sujet_verb":"verbe","pat_adv_sujet":"adverbe","pat_acteur_verbx2_obj":"verbe2","pat_actor_do_action_on_target":"verbe2"}
         for pat_key,pat_val in copy.copy(proposition).items():
             proposition[pat_key+"_neg"] = self.get_neg(pat_val, left_id[pat_key])
         return proposition
