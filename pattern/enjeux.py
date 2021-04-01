@@ -47,24 +47,7 @@ class Proposition(Pattern):
 
 
     def get_patterns(self):
-        proposition = {"pat_sujet_verbx2":[ # Il faut augmenter les taxes
-            {
-                "RIGHT_ID": "objet",
-                "RIGHT_ATTRS": {"POS": "NOUN", "DEP": {"IN": ["obj"]}}
-            },
-            {
-                "LEFT_ID": "objet",
-                "REL_OP": "<",
-                "RIGHT_ID": "verbe",
-                "RIGHT_ATTRS": {"POS": "VERB", "DEP": "xcomp"}
-            },
-            {
-                "LEFT_ID": "verbe",
-                "REL_OP": "<",
-                "RIGHT_ID": "verbe2",
-                "RIGHT_ATTRS": {"POS": "VERB", "DEP": "ROOT"}
-            }
-        ],
+        proposition = {
             "pat_actor_do_action_on_target": [ # Les entreprises doivent payer leur impot
                 {
                     "RIGHT_ID": "objet",

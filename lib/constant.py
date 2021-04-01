@@ -121,7 +121,7 @@ question_patterns = {
         'QUXVlc3Rpb246MTQ3 - Si oui, de quelle manière votre vie quotidienne est-elle touchée par le changement climatique ?': [1,3],
         "QUXVlc3Rpb246MTQ5 - Si oui, que faites-vous aujourd'hui pour protéger l'environnement et/ou que pourriez-vous faire ?": [2],
         "QUXVlc3Rpb246MTUw - Qu'est-ce qui pourrait vous inciter à changer vos comportements comme par exemple mieux entretenir et" \
-        + "régler votre chauffage, modifier votre manière de conduire ou renoncer à prendre votre véhicule pour de très petites distances ?": [2],
+        + " régler votre chauffage, modifier votre manière de conduire ou renoncer à prendre votre véhicule pour de très petites distances ?": [2],
         "QUXVlc3Rpb246MTUx - Quelles seraient pour vous les solutions les plus simples et les plus supportables" \
         + " sur un plan financier pour vous inciter à changer vos comportements ?": [2],
         'QUXVlc3Rpb246MTUz - Si oui, que faudrait-il faire pour vous convaincre ou vous aider à changer de mode de chauffage ?': [2],
