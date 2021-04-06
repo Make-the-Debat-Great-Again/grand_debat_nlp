@@ -1,0 +1,2785 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#"
+     xml:base="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:skos1="http://www.w3.org/2008/05/skos#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:make-the-debat-great-again_transportO="urn:absolute:make-the-debat-great-again_transportO#">
+    <owl:Ontology rdf:about="urn:absolute:make-the-debat-great-again_transportO"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#object -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#object"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2008/05/skos#Concept -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2008/05/skos#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/2008/05/skos#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2008/05/skos#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2008/05/skos#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2008/05/skos#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#accueil -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#accueil">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#consomme -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#consomme">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estConsommePar"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#emprunte -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#emprunte">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estEmpruntePar"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estConsommePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estConsommePar">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#énergie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estEmpruntePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estEmpruntePar">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estUtilisePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estUtilisePar">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#entreprise"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2008/05/skos#altLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2008/05/skos#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2008/05/skos#prefLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2008/05/skos#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#action">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#pratique"/>
+        <skos:prefLabel>action</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#aller_en_ville -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#aller_en_ville">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#trajet_personnel"/>
+        <skos:altLabel>faire du shopping</skos:altLabel>
+        <skos:prefLabel>aller en ville</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#arrêt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#arrêt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#réseau"/>
+        <skos:altLabel>stop</skos:altLabel>
+        <skos:prefLabel>arrêt</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#arrêt_de_bus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#arrêt_de_bus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#arrêt"/>
+        <skos:prefLabel>arrêt de bus</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#arrêt_de_tramway -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#arrêt_de_tramway">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#arrêt"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#accueil"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#tramway"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:altLabel>arrêt de tram</skos:altLabel>
+        <skos:prefLabel>arrêt de tramway</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#autoroute -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#autoroute">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#réseau_routier"/>
+        <skos:altLabel>voie rapide</skos:altLabel>
+        <skos:prefLabel>autoroute</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#autostop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#autostop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#collectif"/>
+        <skos:altLabel>faire du stop</skos:altLabel>
+        <skos:prefLabel>autostop</skos:prefLabel>
+        <skos1:altLabel xml:lang="fr">faire de l&apos;auto-stop</skos1:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#avion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#avion">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Aéronefs_et_vaisseaux_spatiaux"/>
+        <skos:altLabel>jet</skos:altLabel>
+        <skos:prefLabel>avion</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#aérien -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#aérien">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport"/>
+        <skos:altLabel xml:lang="fr">transport par avion</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">transport aérien</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#aéroport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#aéroport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#réseau"/>
+        <skos:prefLabel>aéroport</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#aéroport_de_paris -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#aéroport_de_paris">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Entreprise_Aérienne"/>
+        <skos:altLabel>A.D.P.</skos:altLabel>
+        <skos:altLabel>ADP</skos:altLabel>
+        <skos:prefLabel>aéroport de paris</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#emprunte"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#canal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#port"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:prefLabel>Véhicules maritimes motorisés</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bioéthanol -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bioéthanol">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#energie_renouvelable"/>
+        <skos:altLabel>E10</skos:altLabel>
+        <skos:altLabel>E100</skos:altLabel>
+        <skos:altLabel>E15</skos:altLabel>
+        <skos:altLabel>E20</skos:altLabel>
+        <skos:altLabel>E5</skos:altLabel>
+        <skos:altLabel>E7</skos:altLabel>
+        <skos:altLabel>E70</skos:altLabel>
+        <skos:altLabel>E85</skos:altLabel>
+        <skos:altLabel>E95</skos:altLabel>
+        <skos:prefLabel>bioéthanol</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#blablacar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#blablacar">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Entreprise_pour_particulier"/>
+        <skos:prefLabel>blablacar</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#canal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#canal">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#réseau_maritime"/>
+        <skos:altLabel>chenal</skos:altLabel>
+        <skos:prefLabel>canal</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#client -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#client">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilisateur"/>
+        <skos:prefLabel>client</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#collectif -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#collectif">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport"/>
+        <skos:prefLabel xml:lang="fr">Transport partagé</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#conducteur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#conducteur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilisateur"/>
+        <skos:altLabel xml:lang="fr">automobiliste</skos:altLabel>
+        <skos:altLabel>chauffeur</skos:altLabel>
+        <skos:prefLabel>conducteur</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#covoiturage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#covoiturage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#collectif"/>
+        <skos:altLabel>co-voit&apos;</skos:altLabel>
+        <skos:altLabel xml:lang="fr">co-voiturage</skos:altLabel>
+        <skos:altLabel>covoit</skos:altLabel>
+        <skos:prefLabel>covoiturage</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#diesel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#diesel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#hydrocarbure"/>
+        <skos:altLabel>B7</skos:altLabel>
+        <skos:altLabel xml:lang="fr">gasoil</skos:altLabel>
+        <skos:altLabel xml:lang="fr">gazole</skos:altLabel>
+        <skos:prefLabel>diesel</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#energie_renouvelable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#energie_renouvelable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#énergie"/>
+        <skos:prefLabel>énergie renouvelable</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#entreprise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#entreprise">
+        <skos:altLabel>compagnie</skos:altLabel>
+        <skos:prefLabel>entreprise</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#essence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#essence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#hydrocarbure"/>
+        <skos:altLabel>SP95</skos:altLabel>
+        <skos:altLabel>SP95-E10</skos:altLabel>
+        <skos:altLabel>SP98</skos:altLabel>
+        <skos:prefLabel>essence</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#faire_du_tourisme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#faire_du_tourisme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#action"/>
+        <skos:prefLabel>faire du tourisme</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#faire_un_voyage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#faire_un_voyage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#action"/>
+        <skos:altLabel>voyager</skos:altLabel>
+        <skos:prefLabel>faire un voyage</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ferroviaire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ferroviaire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport"/>
+        <skos:prefLabel xml:lang="fr">Transport ferroviaire</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#flixbus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#flixbus">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Entreprise_Transport_public"/>
+        <skos:prefLabel>flixbus</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#fossile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#fossile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#énergie"/>
+        <skos:altLabel>non renouvelable</skos:altLabel>
+        <skos:altLabel xml:lang="fr">énergie fossile</skos:altLabel>
+        <skos:prefLabel>fossile</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gare -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gare">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#réseau"/>
+        <skos:prefLabel>gare</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gare_ferroviaire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gare_ferroviaire">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gare"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#accueil"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#train"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:altLabel>gare de train</skos:altLabel>
+        <skos:prefLabel>gare ferroviaire</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gare_routière -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gare_routière">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gare"/>
+        <skos:prefLabel>gare routière</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gaz -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gaz">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#fossile"/>
+        <skos:prefLabel>gaz</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#hydrocarbure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#hydrocarbure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#fossile"/>
+        <skos:prefLabel>hydrocarbure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#individuel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#individuel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport"/>
+        <skos:prefLabel xml:lang="fr">Transport individuel</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#kérozène -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#kérozène">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#hydrocarbure"/>
+        <skos:altLabel xml:lang="fr">kerosene</skos:altLabel>
+        <skos:altLabel xml:lang="fr">kérosène</skos:altLabel>
+        <skos:prefLabel>kérozène</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#réseau"/>
+        <skos:prefLabel>ligne</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne_de_bus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne_de_bus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne"/>
+        <skos:prefLabel>ligne de bus</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne_de_train -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne_de_train">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estEmpruntePar"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#train"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:altLabel>ligne ferroviaire</skos:altLabel>
+        <skos:prefLabel>ligne de train</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne_de_tramway -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne_de_tramway">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#estEmpruntePar"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#tramway"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:altLabel>ligne de tram</skos:altLabel>
+        <skos:prefLabel>ligne de tramway</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#marchand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#marchand">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport"/>
+        <skos:altLabel>fret</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">Transport marchand</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#marcher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#marcher">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#action"/>
+        <skos:prefLabel>marcher</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ouibus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ouibus">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Entreprise_Transport_public"/>
+        <skos:prefLabel>ouibus</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ouigo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ouigo">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Entreprise_Ferroviaire"/>
+        <skos:prefLabel>ouigo</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#passager -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#passager">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilisateur"/>
+        <skos:prefLabel>passager</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#petite_ligne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#petite_ligne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne"/>
+        <skos:prefLabel>petite ligne</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#port -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#port">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#réseau"/>
+        <skos:prefLabel>port</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#pratique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#pratique">
+        <skos:prefLabel xml:lang="fr">pratique</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#pédaler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#pédaler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#action"/>
+        <skos:prefLabel>pédaler</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#rouler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#rouler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#action"/>
+        <skos:prefLabel>rouler</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#route -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#route">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#réseau_routier"/>
+        <skos:prefLabel>route</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#routier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#routier">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilise"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#route"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <skos:prefLabel xml:lang="fr">Transport routier</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#rue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#rue">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#réseau_piéton"/>
+        <skos:altLabel>avenue</skos:altLabel>
+        <skos:altLabel>boulevard</skos:altLabel>
+        <skos:prefLabel>rue</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#réseau -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#réseau">
+        <skos:prefLabel>Infrastructure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#se_déplacer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#se_déplacer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#action"/>
+        <skos:prefLabel>se déplacer</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#sncf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#sncf">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Entreprise_Ferroviaire"/>
+        <skos:altLabel>S.N.C.F.</skos:altLabel>
+        <skos:prefLabel>sncf</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#station -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#station">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#réseau"/>
+        <skos:prefLabel>station</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#train"/>
+        <skos:prefLabel>ter</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#tgv -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#tgv">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#train"/>
+        <skos:prefLabel>tgv</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#train -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#train">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicule_guidé"/>
+        <skos:prefLabel>train</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#trajet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#trajet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#pratique"/>
+        <skos:prefLabel>trajet</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#trajet_professionnel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#trajet_professionnel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#trajet"/>
+        <skos:altLabel xml:lang="fr">aller au travail</skos:altLabel>
+        <skos:altLabel xml:lang="fr">déplacement profesionnel</skos:altLabel>
+        <skos:prefLabel>trajet professionnel</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#tramway -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#tramway">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicule_guidé"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#pratique"/>
+        <skos:prefLabel>transport</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport_privé -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport_privé">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport"/>
+        <skos:prefLabel xml:lang="fr">Transport privé</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport_public -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport_public">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#transport"/>
+        <skos:altLabel xml:lang="fr">transport collectif</skos:altLabel>
+        <skos:altLabel xml:lang="fr">transport en commun</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">transport public</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#trotinette -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#trotinette">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#cyclomoteur"/>
+        <skos:prefLabel>trotinette électrique</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#usager -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#usager">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilisateur"/>
+        <skos:prefLabel>usager</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilisateur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilisateur">
+        <skos:prefLabel>utilisateur</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie_cyclable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie_cyclable">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#réseau_transport_en_commun"/>
+        <skos:altLabel>bande cyclable</skos:altLabel>
+        <skos:altLabel>piste cyclable</skos:altLabel>
+        <skos:altLabel>véloroute</skos:altLabel>
+        <skos:prefLabel>voie cyclable</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie_de_bus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie_de_bus">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#réseau_transport_en_commun"/>
+        <skos:altLabel xml:lang="fr">réseau de bus</skos:altLabel>
+        <skos:prefLabel>voie de bus</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie_de_chemin_de_fer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie_de_chemin_de_fer">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#réseau_ferroviaire"/>
+        <skos:altLabel>LGV</skos:altLabel>
+        <skos:altLabel xml:lang="fr">rail</skos:altLabel>
+        <skos:altLabel xml:lang="fr">voie de train</skos:altLabel>
+        <skos:altLabel>voie ferrée</skos:altLabel>
+        <skos:prefLabel>voie de chemin de fer</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie_de_tramway -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voie_de_tramway">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#réseau_transport_en_commun"/>
+        <skos:altLabel>voie de tram</skos:altLabel>
+        <skos:prefLabel>voie de tramway</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voyage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voyage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#action"/>
+        <skos:prefLabel>voyager</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule">
+        <skos:altLabel xml:lang="fr">parc automobile</skos:altLabel>
+        <skos:prefLabel>véhicule</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#vélo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#vélo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+        <skos:altLabel>VTC</skos:altLabel>
+        <skos:altLabel>VTT</skos:altLabel>
+        <skos:altLabel>bicyclette</skos:altLabel>
+        <skos:altLabel>petite reine</skos:altLabel>
+        <skos:altLabel>vélo de route</skos:altLabel>
+        <skos:altLabel>vélocypède</skos:altLabel>
+        <skos:prefLabel>vélo</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#électricité -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#électricité">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#énergie"/>
+        <skos:prefLabel>électricité</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#énergie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#énergie">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <skos:prefLabel>énergie</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Airbus -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Airbus">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Entreprise_Aérienne"/>
+        <skos:prefLabel xml:lang="fr">Airbus</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+        <skos:altLabel xml:lang="fr">voiture</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">Auto-mobile</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Autobus -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Autobus">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:altLabel xml:lang="fr">bus</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">Autobus</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Autoneige -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Autoneige">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:prefLabel xml:lang="fr">Autoneige</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Avenue -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Avenue">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#réseau_piéton"/>
+        <skos:prefLabel xml:lang="fr">Avenue</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Aéroglisseur -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Aéroglisseur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Aéroglisseur</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Aéronefs_et_vaisseaux_spatiaux -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Aéronefs_et_vaisseaux_spatiaux">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+        <skos:prefLabel xml:lang="fr">Aréonefs et vaisseaux spatiaux</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Bac -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Bac">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Bac</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Ballon_dirigeable -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Ballon_dirigeable">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Aéronefs_et_vaisseaux_spatiaux"/>
+        <skos:prefLabel xml:lang="fr">Ballon dirigeable</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Barge -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Barge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Barge</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Bateau -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Bateau">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Bateau</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Bateau_Pilote -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Bateau_Pilote">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Bateau pilote</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Bateau_à_Vapeur -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Bateau_à_Vapeur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Bateau à vapeur</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Boeing -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Boeing">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Entreprise_Aérienne"/>
+        <skos:prefLabel xml:lang="fr">Boeing</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Butane -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Butane">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#hydrocarbure"/>
+        <skos:prefLabel xml:lang="fr">Butane</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Butanier -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Butanier">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Butanier</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Camion -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Camion">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:prefLabel xml:lang="fr">Camion</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Camionnette -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Camionnette">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:prefLabel xml:lang="fr">Camionnette</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Canot -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Canot">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicules_maritimes_non-motorisés"/>
+        <skos:prefLabel xml:lang="fr">Canot</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Canoë -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Canoë">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicules_maritimes_non-motorisés"/>
+        <skos:prefLabel xml:lang="fr">Canoë</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Car -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Car">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:prefLabel xml:lang="fr">Car</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Caravane -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Caravane">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicule_de_chargement"/>
+        <skos:prefLabel xml:lang="fr">Caravane</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Cargo -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Cargo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Cargo</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Catamaran -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Catamaran">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicules_maritimes_non-motorisés"/>
+        <skos:prefLabel xml:lang="fr">Catamaran</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Chalutier -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Chalutier">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Chalutier</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Charette -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Charette">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicule_de_chargement"/>
+        <skos:prefLabel xml:lang="fr">Charette</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Chariot -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Chariot">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicule_de_chargement"/>
+        <skos:prefLabel xml:lang="fr">Chariot</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Chariot_élévateur -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Chariot_élévateur">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicule_de_chargement"/>
+        <skos:prefLabel xml:lang="fr">Chariot élévateur</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Chasse-neige -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Chasse-neige">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Engin_Agricole"/>
+        <skos:prefLabel xml:lang="fr">Chasse-neige</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Chimiquier -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Chimiquier">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Chimiquier</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Citroën -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Citroën">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Entreprise_Automobile"/>
+        <skos:prefLabel xml:lang="fr">Citroën</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Coupé -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Coupé">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:prefLabel xml:lang="fr">Coupé</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Croiseur -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Croiseur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Croiseur</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Cuirassé -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Cuirassé">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Cuirassé</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Cyclomoteur -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Cyclomoteur">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:prefLabel xml:lang="fr">Cyclomoteur</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Câblier -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Câblier">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Câblier</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Destroyer -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Destroyer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Destroyer</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Dioxygène -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Dioxygène">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#hydrocarbure"/>
+        <skos:prefLabel xml:lang="fr">Dioxygène</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Dériveur -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Dériveur">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicules_maritimes_non-motorisés"/>
+        <skos:prefLabel xml:lang="fr">Dériveur</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Engin_Agricole -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Engin_Agricole">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+        <skos:prefLabel xml:lang="fr">Engin Agricole</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Engin_de_chantier -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Engin_de_chantier">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Engin_Agricole"/>
+        <skos:prefLabel xml:lang="fr">Engin de chantier</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Entreprise_Automobile -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Entreprise_Automobile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#entreprise"/>
+        <skos:altLabel xml:lang="fr">constructeur automobile</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">Entreprise Automobile</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Entreprise_Aérienne -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Entreprise_Aérienne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#entreprise"/>
+        <skos:prefLabel xml:lang="fr">Entreprise de transport aérien</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Entreprise_Ferroviaire -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Entreprise_Ferroviaire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#entreprise"/>
+        <skos:prefLabel xml:lang="fr">Entreprise de transport ferroviaire</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Entreprise_Transport_public -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Entreprise_Transport_public">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#entreprise"/>
+        <skos:altLabel xml:lang="fr">Entreprise de transport publique</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">Entreprise de transport public</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Entreprise_pour_particulier -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Entreprise_pour_particulier">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#entreprise"/>
+        <skos:prefLabel xml:lang="fr">Entreprise pour particulier</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Entreprise_spatiale -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Entreprise_spatiale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#entreprise"/>
+        <skos:prefLabel xml:lang="fr">Entreprise Spatiale</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Ethanol -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Ethanol">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#hydrocarbure"/>
+        <skos:prefLabel xml:lang="fr">éthanol</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Ferry -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Ferry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Ferry</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Fioul -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Fioul">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#hydrocarbure"/>
+        <skos:altLabel xml:lang="fr">mazout</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">Fioul</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Formule_1 -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Formule_1">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:prefLabel xml:lang="fr">Formule 1</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Fusée -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Fusée">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Aéronefs_et_vaisseaux_spatiaux"/>
+        <skos:prefLabel xml:lang="fr">Fusée</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Hors-bord -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Hors-bord">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Hors-bord</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Huile_végétale -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Huile_végétale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#hydrocarbure"/>
+        <skos:prefLabel xml:lang="fr">Huile végétale</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Hydravion -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Hydravion">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Aéronefs_et_vaisseaux_spatiaux"/>
+        <skos:prefLabel xml:lang="fr">Hydravion</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Hydrogène -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Hydrogène">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#hydrocarbure"/>
+        <skos:prefLabel xml:lang="fr">Hydrogène</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Hydroplane -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Hydroplane">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Hydroplane</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Hydroptère -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Hydroptère">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Hydroptère</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Hélicoptère -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Hélicoptère">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Aéronefs_et_vaisseaux_spatiaux"/>
+        <skos:prefLabel xml:lang="fr">Hélicoptère</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Jeep -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Jeep">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:prefLabel xml:lang="fr">Jeep</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Locomotive -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Locomotive">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicule_guidé"/>
+        <skos:prefLabel xml:lang="fr">Locomotive</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Moissonneuse-batteuse -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Moissonneuse-batteuse">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Engin_Agricole"/>
+        <skos:prefLabel xml:lang="fr">Moissonneuse-batteuse</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Monocoque -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Monocoque">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicules_maritimes_non-motorisés"/>
+        <skos:prefLabel xml:lang="fr">Monocoque</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Monospace -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Monospace">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:prefLabel xml:lang="fr">Monospace</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Motocyclette -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Motocyclette">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:prefLabel xml:lang="fr">Motocyclette</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Motoneige -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Motoneige">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:prefLabel xml:lang="fr">Motoneige</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Méthane -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Méthane">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#hydrocarbure"/>
+        <skos:prefLabel xml:lang="fr">Méthane</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#NASA -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#NASA">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Entreprise_spatiale"/>
+        <skos:altLabel xml:lang="fr">N.A.S.A</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">NASA</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Navette_Spatiale -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Navette_Spatiale">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Aéronefs_et_vaisseaux_spatiaux"/>
+        <skos:prefLabel xml:lang="fr">Navette spatiale</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Ovni -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Ovni">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Aéronefs_et_vaisseaux_spatiaux"/>
+        <skos:prefLabel xml:lang="fr">Ovni</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Paquebot -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Paquebot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Paquebot</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Peugeot -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Peugeot">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Entreprise_Automobile"/>
+        <skos:prefLabel xml:lang="fr">Peugeot</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Planche_à_voile -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Planche_à_voile">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicules_maritimes_non-motorisés"/>
+        <skos:prefLabel xml:lang="fr">Planche à voile</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Poids-lourd -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Poids-lourd">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:altLabel xml:lang="fr">poids lourd</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">Poids lourd</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Porte-Conteneur -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Porte-Conteneur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Porte-conteneur</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Porte-avions -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Porte-avions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Porte-avions</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Portes-hélicoptères -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Portes-hélicoptères">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Porte hélicoptère</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Propane -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Propane">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#gaz"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#hydrocarbure"/>
+        <skos:prefLabel xml:lang="fr">Propane</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Péniche -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Péniche">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Péniche</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Pétrolier -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Pétrolier">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Pétrolier</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Radeau_de_Survie -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Radeau_de_Survie">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicules_maritimes_non-motorisés"/>
+        <skos:prefLabel xml:lang="fr">Radeau de survie</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Radot -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Radot">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicules_maritimes_non-motorisés"/>
+        <skos:prefLabel xml:lang="fr">Radot</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Remorques -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Remorques">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicule_de_chargement"/>
+        <skos:prefLabel xml:lang="fr">Remorque</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Remorqueur -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Remorqueur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Remorqueur</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Renault -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Renault">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Entreprise_Automobile"/>
+        <skos:prefLabel xml:lang="fr">Renault</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Roulotte -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Roulotte">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicule_de_chargement"/>
+        <skos:prefLabel xml:lang="fr">Roulotte</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Semi-remorque -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Semi-remorque">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicule_de_chargement"/>
+        <skos:prefLabel xml:lang="fr">Semi-Remorque</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Side-car -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Side-car">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:prefLabel xml:lang="fr">Side-car</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Souffleuse_à_neige -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Souffleuse_à_neige">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Engin_Agricole"/>
+        <skos:prefLabel xml:lang="fr">Souffleuse à neige</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Sous-Marin -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Sous-Marin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+        <skos:prefLabel xml:lang="fr">Sous-marin</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Station_Spatiale -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Station_Spatiale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#station"/>
+        <skos:prefLabel xml:lang="fr">Station Spatiale</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Torpilleur -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Torpilleur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Torpilleur</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Tracteur_agricole -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Tracteur_agricole">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Engin_Agricole"/>
+        <skos:prefLabel xml:lang="fr">Tracteur agricole</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Tracteur_routier -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Tracteur_routier">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:prefLabel xml:lang="fr">Tracteur routier</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Traîneau -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Traîneau">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicule_de_chargement"/>
+        <skos:prefLabel xml:lang="fr">Traîneau</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Trimaran -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Trimaran">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicules_maritimes_non-motorisés"/>
+        <skos:prefLabel xml:lang="fr">Trimaran</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Trolleybus -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Trolleybus">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:prefLabel xml:lang="fr">Trolleybus</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Vedette -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Vedette">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Vedette</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Voilier -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Voilier">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicules_maritimes_non-motorisés"/>
+        <skos:prefLabel xml:lang="fr">Voilier</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Véhicule_de_chargement -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Véhicule_de_chargement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+        <skos:prefLabel xml:lang="fr">Véhicule de chargement</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Véhicule_guidé -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Véhicule_guidé">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+        <skos:prefLabel xml:lang="fr">Véhicule guidé</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Véhicules_Blindés -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Véhicules_Blindés">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:altLabel xml:lang="fr">voiture blindé</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">Véhicule blindé</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Véhicules_maritimes_non-motorisés -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Véhicules_maritimes_non-motorisés">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+        <skos:prefLabel xml:lang="fr">Véhicules maritimes non-motorisés</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Wagon -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Wagon">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicule_de_chargement"/>
+        <skos:prefLabel xml:lang="fr">Wagon</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Yacht -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Yacht">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Yacht</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#aide -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#aide">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#financier"/>
+        <skos:altLabel xml:lang="fr">aide financière</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">aide</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#assurance -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#assurance">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#cotisation"/>
+        <skos:prefLabel xml:lang="fr">assurance</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#auto-partage -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#auto-partage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#collectif"/>
+        <skos:altLabel xml:lang="fr">auto-partage</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#avion_de_ligne -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#avion_de_ligne">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Aéronefs_et_vaisseaux_spatiaux"/>
+        <skos:prefLabel xml:lang="fr">Avion de ligne</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#bateau-mouche -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#bateau-mouche">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#bateau"/>
+        <skos:prefLabel xml:lang="fr">Bateu-mouche</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#bonus_écologique -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#bonus_écologique">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#taxe"/>
+        <skos:prefLabel xml:lang="fr">bonus écologique</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#caractéristique -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#caractéristique"/>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#carburant -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#carburant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#énergie"/>
+        <skos:altLabel xml:lang="fr">fuel</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">carburant</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#charbon -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#charbon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#fossile"/>
+        <skos:prefLabel xml:lang="fr">charbon</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#chemin -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#chemin">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#réseau_piéton"/>
+        <skos:altLabel xml:lang="fr">sentier</skos:altLabel>
+        <skos:prefLabel>chemin</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#circuler -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#circuler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#action"/>
+        <skos:prefLabel>circuler</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#compétitivité -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#compétitivité">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#caractéristique"/>
+        <skos:prefLabel xml:lang="fr">compétitivité</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#consommation -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#consommation">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#caractéristique"/>
+        <skos:prefLabel xml:lang="fr">consommation</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#cotisation -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#cotisation">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#financier"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#crédit -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#crédit">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#financier"/>
+        <skos:prefLabel xml:lang="fr">crédit</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#crédit_à_taux_zéro -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#crédit_à_taux_zéro">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#crédit"/>
+        <skos:prefLabel xml:lang="fr">crédit à taux zéro</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#cyclomoteur -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#cyclomoteur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#véhicule"/>
+        <skos:altLabel>deux roues</skos:altLabel>
+        <skos:prefLabel>Cyclomoteur</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#disponibilité -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#disponibilité">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#caractéristique"/>
+        <skos:prefLabel xml:lang="fr">disponibilité</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#efficacité -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#efficacité">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#caractéristique"/>
+        <skos:prefLabel xml:lang="fr">efficacité</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#embouteillage -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#embouteillage">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#événement"/>
+        <skos:prefLabel xml:lang="fr">embouteillage</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#faire_les_courses -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#faire_les_courses">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#trajet_personnel"/>
+        <skos:prefLabel xml:lang="fr">faire les courses</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#ferroutage -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#ferroutage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ferroviaire"/>
+        <skos:prefLabel>ferroutage</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#financier -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#financier"/>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#fréquence -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#fréquence">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#caractéristique"/>
+        <skos:prefLabel xml:lang="fr">fréquence</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#gaz_de_pétrole_liquéfié -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#gaz_de_pétrole_liquéfié">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#hydrocarbure"/>
+        <skos:altLabel>GPL</skos:altLabel>
+        <skos:prefLabel>gaz de pétrole liquéfié</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#gratuité -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#gratuité">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#caractéristique"/>
+        <skos:altLabel xml:lang="fr">gratuit</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">gratuité</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#horaire -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#horaire">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#caractéristique"/>
+        <skos:prefLabel xml:lang="fr">horaire</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#hydrogène -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#hydrogène">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#énergie"/>
+        <skos:prefLabel>hydrogène</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#intercité -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#intercité">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ferroviaire"/>
+        <skos:prefLabel>intercité</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#ligne_aérienne -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#ligne_aérienne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#ligne"/>
+        <skos:prefLabel xml:lang="fr">ligne aérienne</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#limite -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#limite">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#caractéristique"/>
+        <skos:prefLabel xml:lang="fr">limite</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#malus_écologique -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#malus_écologique">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#taxe"/>
+        <skos:prefLabel xml:lang="fr">malus écologique</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#metro -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#metro">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Véhicule_guidé"/>
+        <skos:prefLabel xml:lang="fr">métro</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#mobylette -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#mobylette">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#cyclomoteur"/>
+        <skos:altLabel>mob</skos:altLabel>
+        <skos:prefLabel>mobylette</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#motard -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#motard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#utilisateur"/>
+        <skos:prefLabel>motard</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#motocyclette -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#motocyclette">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#cyclomoteur"/>
+        <skos:altLabel>moto</skos:altLabel>
+        <skos:prefLabel>motocyclette</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#offre -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#offre">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#caractéristique"/>
+        <skos:prefLabel xml:lang="fr">offre</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#parking -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#parking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#réseau"/>
+        <skos:altLabel>stationnement</skos:altLabel>
+        <skos:prefLabel>parking</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#parking_relais -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#parking_relais">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#parking"/>
+        <skos:prefLabel>parking relais</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#parking_à_vélos -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#parking_à_vélos">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#parking"/>
+        <skos:altLabel>abri à vélos</skos:altLabel>
+        <skos:prefLabel>parking à vélos</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#prime -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#prime">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#financier"/>
+        <skos:prefLabel xml:lang="fr">prime</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#prime_à_la_conversion -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#prime_à_la_conversion">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#prime"/>
+        <skos:prefLabel xml:lang="fr">prime à la conversion</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#prix -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#prix">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#caractéristique"/>
+        <skos:altLabel xml:lang="fr">coût</skos:altLabel>
+        <skos:altLabel xml:lang="fr">montant</skos:altLabel>
+        <skos:altLabel xml:lang="fr">tarif</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">prix</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#production -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#production">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#caractéristique"/>
+        <skos:prefLabel xml:lang="fr">production</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#propreté -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#propreté">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#caractéristique"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#propulseur_de_plongé -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#propulseur_de_plongé">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Sous-Marin"/>
+        <skos:prefLabel xml:lang="fr">Propulseur de plongé</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#péage -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#péage">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#financier"/>
+        <skos:prefLabel xml:lang="fr">péage</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#périphérique -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#périphérique">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#réseau_routier"/>
+        <skos:altLabel>périph</skos:altLabel>
+        <skos:prefLabel>périphérique</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#pétrole -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#pétrole">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#hydrocarbure"/>
+        <skos:prefLabel xml:lang="fr">pétrole</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#quantité -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#quantité">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#caractéristique"/>
+        <skos:altLabel xml:lang="fr">nombre</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">quantité</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#rer -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#rer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#train"/>
+        <skos:altLabel xml:lang="fr">rer</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#rue_piétonne -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#rue_piétonne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#rue"/>
+        <skos:prefLabel>rue piétonne</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#réseau -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#réseau">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#réseau"/>
+        <skos:altLabel xml:lang="fr">maillage</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">réseau</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#réseau_aérien -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#réseau_aérien">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#réseau"/>
+        <skos:prefLabel xml:lang="fr">réseau aérien</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#réseau_ferroviaire -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#réseau_ferroviaire">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#réseau"/>
+        <skos:altLabel xml:lang="fr">réseau de chemin de fer</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">Réseau ferroviaire</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#réseau_maritime -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#réseau_maritime">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#réseau"/>
+        <skos:prefLabel xml:lang="fr">Réseau maritime</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#réseau_piéton -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#réseau_piéton">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#réseau"/>
+        <skos:prefLabel xml:lang="fr">réseau piéton</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#réseau_routier -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#réseau_routier">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#réseau"/>
+        <skos:prefLabel xml:lang="fr">réseau routier</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#réseau_transport_en_commun -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#réseau_transport_en_commun">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#réseau"/>
+        <skos:prefLabel xml:lang="fr">Réseau de transport en commun</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#scooter -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#scooter">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#cyclomoteur"/>
+        <skos:prefLabel>scooter</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#solex -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#solex">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#cyclomoteur"/>
+        <skos:prefLabel>solex</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#taxation -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#taxation">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#caractéristique"/>
+        <skos:prefLabel xml:lang="fr">taxation</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#taxe -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#taxe">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#financier"/>
+        <skos:prefLabel xml:lang="fr">taxe</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#taxi -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#taxi">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:prefLabel xml:lang="fr">Taxi</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#tesla -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#tesla">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Entreprise_Automobile"/>
+        <skos:prefLabel xml:lang="fr">Tesla</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#train_corail -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#train_corail">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#train"/>
+        <skos:prefLabel>train corail</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#train_de_nuit -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#train_de_nuit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#train"/>
+        <skos:prefLabel xml:lang="fr">train de nuit</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#trajet_personnel -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#trajet_personnel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#trajet"/>
+        <skos:altLabel>déplacement personnel</skos:altLabel>
+        <skos:prefLabel>trajet personnel</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#vignette_automobile -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#vignette_automobile">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#taxe"/>
+        <skos:altLabel xml:lang="fr">vignette auto</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">vignette automobile</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#vitesse -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#vitesse">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#caractéristique"/>
+        <skos:altLabel xml:lang="fr">rapidité</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">vitesse</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#voiture_hybride -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#voiture_hybride">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:altLabel xml:lang="fr">véhicule hybride</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">Voiture hybride</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#voiture_hydrogène -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#voiture_hydrogène">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:altLabel xml:lang="fr">Voiture hydrogène</skos:altLabel>
+        <skos:altLabel xml:lang="fr">véhicule hydrogène</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">Voiture à hydrogène</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#voiture_polluante -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#voiture_polluante">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#propreté"/>
+        <skos:prefLabel xml:lang="fr">voiture polluante</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#voiture_propre -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#voiture_propre">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#propreté"/>
+        <skos:altLabel xml:lang="fr">véhicule propre</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">voiture propre</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#voiture_thermique -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#voiture_thermique">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:altLabel xml:lang="fr">voiture diesel</skos:altLabel>
+        <skos:altLabel xml:lang="fr">véhicule diesel</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">Voiture essence</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Voiture thermique</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#voiture_électrique -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#voiture_électrique">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:altLabel xml:lang="fr">véhicule électrique</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">Voiture électrique</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#vélo_électrique -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#vélo_électrique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#vélo"/>
+        <skos:altLabel>VAE</skos:altLabel>
+        <skos:altLabel>vélo à assistance électrique</skos:altLabel>
+        <skos:prefLabel>vélo électrique</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#émission -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#émission">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#caractéristique"/>
+        <skos:altLabel xml:lang="fr">rejet</skos:altLabel>
+        <skos:prefLabel xml:lang="fr">émission</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#énergie_nucléaire -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#énergie_nucléaire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#énergie"/>
+        <skos:prefLabel xml:lang="fr">énergie nucléaire</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#énergie_solaire -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#énergie_solaire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#energie_renouvelable"/>
+        <skos:prefLabel xml:lang="fr">énergie solaire</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#éolienne -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#éolienne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#energie_renouvelable"/>
+        <skos:prefLabel xml:lang="fr">énergie éolienne</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#état -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#état">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#caractéristique"/>
+        <skos:prefLabel xml:lang="fr">état</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#événement -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#événement"/>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#Char_d&apos;assaut -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#Char_d&apos;assaut">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#Auto-Mobile"/>
+        <skos:prefLabel xml:lang="fr">Char d&apos;assault</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:make-the-debat-great-again_transportO#crédit_d&apos;impôt -->
+
+    <owl:Class rdf:about="urn:absolute:make-the-debat-great-again_transportO#crédit_d&apos;impôt">
+        <rdfs:subClassOf rdf:resource="urn:absolute:make-the-debat-great-again_transportO#crédit"/>
+        <skos:prefLabel xml:lang="fr">crédit d&apos;impôt</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#tramway -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#tramway">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voiture -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#voiture">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lentschat_admin/ontologies/2020/4/untitled-ontology-15#tramway">
+        <skos:prefLabel xml:lang="fr">tramway</skos:prefLabel>
+        <skos:altLabel xml:lang="fr">tram</skos:altLabel>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

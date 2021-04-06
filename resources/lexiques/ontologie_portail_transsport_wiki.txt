@@ -1,0 +1,68 @@
+Véhicules
+    Véhicules motorisés
+        Véhicules guidés
+            Locomotive Rame automotrice Tramway Train Funiculaire Aérotrain Monorail Transrapid Ascenseurs Téléski Télésiège Télécabine Téléphérique Personal_Rapid_Transit
+        Automobile
+            Autobus Automobile Autoneige Car Camion Camionnette Coupé cabriolet Cyclomoteur Formule_1 Motocyclette Motoneige Monospace Poids_lourd Side-car Tracteur_routier Taxi Trolleybus
+        Bateau et mixtes
+            Navire Paquebot Bateau-mouche Bateau_à_vapeur Bac Ferry Barge Péniche Remorqueur Cargo Porte-conteneurs Pétrolier Butanier Chimiquier Hors-bord Hydroptère Hydroplane Yacht Chalutier Câblier Aéroglisseur Ékranoplane Véhicule_amphibie Bateau Bateau_pilote
+        Sous-marin
+            sous-marin propulseur_de_plongée Sous-marin_à_propulsion_humaine
+        Aéronefs et vaisseaux spatiaux
+            Avion Avion_de_ligne Ballon_dirigeable Hydravion Hélicoptère Lanceur Fusée Navette_spatiale Ovni Station_spatiale
+        Engins agricoles et de chantiers
+            Tracteur_agricole Moissonneuse-batteuse Engin_de_chantier Chasse-neige Souffleuse_à_neige
+        Véhicules militaires
+            Jeep Véhicule_blindé Char_d'assaut Croiseur Cuirassé Destroyer Vedette Torpilleur Porte-avions Porte-hélicoptères Sous-marin Avion_militaire Avion_de_chasse Bombardier
+        Véhicules de chargements
+            Remorques Wagon Semi-remorque Caravane Chariot Charrette Roulotte Traîneau Chariot_élévateur
+    Véhicules non motorisés
+        Maritimes
+            Planche_à_voile Voilier Dériveur Monocoque Catamaran Trimaran Canoë Canot Radeau_de_survie Galère Voilier_des_airs
+        Aériens
+            Deltaplane Planeur Parachute Parapente Aérostat Montgolfière ballon_à_gaz
+        Terrestres
+            Vélomobile Monocycle Tandem Segway PT Chaussures Raquette_à_neige Luge Ski Snowboard Planche_de_surf Diligence
+    Véhicules à propulsion humaine
+        Bicyclette Fauteuil_roulant Trottinette Planche_à_roulettes Roller Kayak Kayak_de_mer
+Aspects techniques
+    Énergie
+        Pile_à_combustible Énergie_renouvelable Énergie_éolienne Énergie_solaire Électricité Carburant Combustion Comburant Charbon propulsion_humaine
+        Les hydrocarbures
+            Pétrole Essence Gazole Kérosène Fioul Biocarburant Éthanol Huile_végétale carburant Propergol Ergol Méthane Propane Butane Gaz_de_pétrole_liquéfié Hydrogène Dioxygène
+    Orientation
+        Cartographie Toponymie Atlas Coordonnées Longitude Latitude Altitude Boussole Sextant Balise Sémaphore Radar Radionavigation Boussole Positionnement_satellitaire G.P.S. Galileo GLONASS Navigation Géolocalisation Orientation
+    Mécanique
+        Carrosserie Aérodynamisme Hydrodynamisme Pare-brise
+        Mécanique et motorisation
+            Transmission Allumage Bougie Moteur Échappement Refroidissement Radiateur Ventilateur Réservoir Batterie Carburateur Chaudière Piston Différentiel Embrayage Moteur Diesel Machine_à_vapeur Tableau_de_bord
+        Véhicules terrestres
+            Entretien_de_l'automobile Conception_d'une automobile Fonctionnement_de_l'automobile Suspension Pneumatique Direction Roues Bogie Chenille Freins Jantes Essieux Pare-chocs Châssis Capot
+        Navires, aéronefs et autre véhicules
+            Coque Voile Mât Quille Gouvernail Gouverne Aile Hélice Rotor Coussin_d'air Géométrie_variable
+Infrastructures
+    Construction
+        Les infrastructures
+            Réseau_routier Voirie Réseau_ferroviaire Réseau_des_voies_navigables Espace_aérien
+        Les ouvrages d'art
+            Pont Viaduc Tunnel Phare Jetée Écluse Ascenseur_à_bateaux Château_d'eau Aqueduc Ouvrages_d'art
+        Équipements et sites
+            Chantier_naval Chaussée Chaussée_(terre-plein) Rue_piétonne Aménagement Piste_cyclable Abribus Aubette Éclairage_public Stationnement Aiguillage Usine
+
+    Communication et signalisation
+        Réseau de distribution de transports
+            Réseau_de_communications Réseau_téléphonique Câble_sous-marin Réseau_câblé réseau_hertzien Satellite_artificiel Carrefour Gare Gare_de_triage Port Aérodrome Aéroport Réseau_de_distribution
+        Éléments de liaison et de signalisation
+            Autoroute Voie_rapide Route Rue Canal Chenal Voie_ferrée Oléoduc Gazoduc Canalisation Égout Câble Fibre_optique signalisation Signalisation_routière Borne_routière Signalisation_ferroviaire Signalisation_maritime
+
+Métiers
+    de l'aéronautique
+        Aviateur Contrôleur_aérien Hôtesse Steward Instructeur Mécanicien_d'aéronefs Pilote_d'essai
+    du chemin de fer
+        Aiguilleur Chef_de_service Chef_de_train Cheminot Conducteur_de_train Contrôleur Mécanicien_de_locomotive
+    du domaine maritime
+        Amiral Architecte_naval Batelier Capitaine Chef_mécanicien Chien_jaune Docker Fusilier_marin Goémonier Lamaneur Marin Matelot Navigateur_(marine) Navigateur_timonier Officier de marine Officier_de_port Passeur Pilote Quartier-maître Sous-marinier Timonier
+    de la route
+        Ambulancier Chauffeur_de_bus Chauffeur_de_poids-lourd Contrôleur_des_transports Mécanicien automobile Patrouilleur_routier Pilote_de_course
+Entreprises
+    Airbus Boeing Bombardier N.A.S.A. S.N.C.F. Yellow Cab Company CNES

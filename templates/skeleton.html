@@ -109,7 +109,6 @@
                         var query = {
                             q: params.term,
                         }
-
                         // Query parameters will be ?search=[term]&type=public
                         return JSON.stringify(query);
                     },
@@ -138,7 +137,8 @@
                     url: '/features',
                     dataType: 'json',
                     type: "POST",
-                    contentType: "application/json"
+                    contentType: "application/json",
+                    delay: 250
 
                     // Additional AJAX parameters go here; see the end of this chapter for the full code of this example
                 },minimumInputLength: 3
@@ -159,7 +159,8 @@
                     url: '/objects',
                     dataType: 'json',
                     type: "POST",
-                    contentType: "application/json"
+                    contentType: "application/json",
+                    delay: 250
 
                     // Additional AJAX parameters go here; see the end of this chapter for the full code of this example
                 },minimumInputLength: 3

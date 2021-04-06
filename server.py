@@ -10,7 +10,7 @@ from collections import OrderedDict
 app = Flask(__name__)
 
 # LOAD DATA
-con = sqlite3.connect("./transition_eco_prop_withkeywords_and_classes.db",check_same_thread=False)
+con = sqlite3.connect("./outputs/transition_eco_prop_withkeywords_and_classes.db",check_same_thread=False)
 
 # LOAD VERBS
 all_verbs = pd.read_sql_query("select distinct(verbe) from transition_eco",con)["verbe"].values.tolist()
@@ -102,7 +102,7 @@ def get_features():
 
 @app.route("/get_geo_data")
 def dep_data():  
-    return jsonify(json.load(open("departements_centroid.geojson")))
+    return jsonify(json.load(open("resources/geodata/departements_centroid.geojson")))
 
 @app.route("/query" ,methods=['GET', 'POST'])
 def query():
