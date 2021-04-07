@@ -27,22 +27,22 @@
     "abdiquer": {
         "root": "abdiqu",
         "template": "aim:er",
-        "polarity": 0
+        "polarity": -1
     },
     "aberrer": {
         "root": "aberr",
         "template": "aim:er",
-        "polarity": 0
+        "polarity": -1
     },
     "abhorrer": {
         "root": "abhorr",
         "template": "aim:er",
-        "polarity": 0
+        "polarity": 1
     },
     "abjurer": {
         "root": "abjur",
         "template": "aim:er",
-        "polarity": 0
+        "polarity": -1
     },
     "ablater": {
         "root": "ablat",
@@ -52,12 +52,12 @@
     "abloquer": {
         "root": "abloqu",
         "template": "aim:er",
-        "polarity": 0
+        "polarity": 1
     },
     "abolir": {
         "root": "abol",
         "template": "fin:ir",
-        "polarity": 0
+        "polarity": -1
     },
     "abominer": {
         "root": "abomin",
@@ -67,12 +67,12 @@
     "abonder": {
         "root": "abond",
         "template": "aim:er",
-        "polarity": 0
+        "polarity": 1
     },
     "abonner": {
         "root": "abonn",
         "template": "aim:er",
-        "polarity": 0
+        "polarity": 1
     },
     "abonnir": {
         "root": "abonn",
@@ -92,7 +92,7 @@
     "abouler": {
         "root": "aboul",
         "template": "aim:er",
-        "polarity": 0
+        "polarity": 1
     },
     "abouter": {
         "root": "about",
@@ -117,7 +117,7 @@
     "abreuver": {
         "root": "abreuv",
         "template": "aim:er",
-        "polarity": 0
+        "polarity": 1
     },
     "abricoter": {
         "root": "abricot",
@@ -137,17 +137,17 @@
     "abroger": {
         "root": "abro",
         "template": "man:ger",
-        "polarity": 0
+        "polarity": -1
     },
     "abrutir": {
         "root": "abrut",
         "template": "fin:ir",
-        "polarity": 0
+        "polarity": -1
     },
     "abréger": {
         "root": "abr",
         "template": "abr:éger",
-        "polarity": 0
+        "polarity": -1
     },
     "abrévier": {
         "root": "abrévi",
@@ -157,32 +157,32 @@
     "absenter": {
         "root": "absent",
         "template": "aim:er",
-        "polarity": 0
+        "polarity": -1
     },
     "absorber": {
         "root": "absorb",
         "template": "aim:er",
-        "polarity": 0
+        "polarity": -1
     },
     "absoudre": {
         "root": "abso",
         "template": "abso:udre",
-        "polarity": 0
+        "polarity": -1
     },
     "abstenir": {
         "root": "abst",
         "template": "t:enir",
-        "polarity": 0
+        "polarity": -1
     },
     "abstraire": {
         "root": "abstra",
         "template": "extra:ire",
-        "polarity": 0
+        "polarity": -1
     },
     "abuser": {
         "root": "abus",
         "template": "aim:er",
-        "polarity": 0
+        "polarity": -1
     },
     "abâtardir": {
         "root": "abâtard",
@@ -197,17 +197,17 @@
     "abîmer": {
         "root": "abîm",
         "template": "aim:er",
-        "polarity": 0
+        "polarity": -1
     },
     "accabler": {
         "root": "accabl",
         "template": "aim:er",
-        "polarity": 0
+        "polarity": -1
     },
     "accaparer": {
         "root": "accapar",
         "template": "aim:er",
-        "polarity": 0
+        "polarity": -1
     },
     "accastiller": {
         "root": "accastill",
@@ -1257,12 +1257,12 @@
     "amender": {
         "root": "amend",
         "template": "aim:er",
-        "polarity": 0
+        "polarity": -1
     },
     "amener": {
         "root": "am",
         "template": "m:ener",
-        "polarity": 0
+        "polarity": 1
     },
     "amenuiser": {
         "root": "amenuis",

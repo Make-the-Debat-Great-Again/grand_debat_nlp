@@ -6,11 +6,15 @@ import geopandas as gpd
 import json
 from editdistance import distance
 from collections import OrderedDict
+import re 
 
 app = Flask(__name__)
 
 # LOAD DATA
-con = sqlite3.connect("./outputs/transition_eco_prop_withkeywords_and_classes.db",check_same_thread=False)
+con = sqlite3.connect("./transition_eco_prop_withkeywords_and_classes_and_polarity.db",check_same_thread=False)
+def regexp(pattern, input):
+    return bool(re.match(pattern, input))
+con.create_function('regexp', 2, regexp)
 
 # LOAD VERBS
 all_verbs = pd.read_sql_query("select distinct(verbe) from transition_eco",con)["verbe"].values.tolist()
@@ -110,7 +114,10 @@ def query():
     selected_verb = content.get('verb', [])
     selected_feature =content.get('feat',[])
     selected_object = content.get('obj', [])
-    print(selected_verb,selected_object,selected_feature)
+    selected_polarite = content.get('pol', None)
+    if selected_polarite not in "-1 1 0".split():
+        selected_polarite=None
+    print(selected_verb,selected_object,selected_feature,selected_polarite)
 
     
     template="""
@@ -118,35 +125,24 @@ def query():
     where {0};
     """
     conditions = ""
-    if selected_verb:
-        conditions += "("
-        for ix,verbe in enumerate(selected_verb):
-            if ix ==0:
-                conditions = conditions + "instr(verbe,\"{0}\") >0 ".format(verbe)
-            else:
-                conditions = conditions + "OR instr(verbe,\"{0}\") >0 ".format(verbe)
-        conditions +=")"
+    if selected_verb and not selected_polarite:
+        conditions+="verbe REGEXP \".*({0}).*\"".format("|".join(selected_verb))
 
     if selected_feature:
         if selected_verb:
-            conditions +=" and"
-        conditions += "("
-        for ix,keyword in enumerate(selected_feature):
-            if ix ==0:
-                conditions = conditions + "instr(keywords_in_onto,\"{0}\") >0 ".format(keyword)
-            else:
-                conditions = conditions + "OR instr(keywords_in_onto,\"{0}\") >0 ".format(keyword)
-        conditions += ")"
+            conditions +=" and "
+        conditions+="keywords_in_onto REGEXP \".*({0}).*\"".format("|".join(selected_feature))
+
     if selected_object:
         if selected_verb or selected_feature:
-            conditions +=" and"
-        conditions += "("
-        for ix,keyword in enumerate(selected_object):
-            if ix ==0:
-                conditions = conditions + "instr(keywords_in_onto,\"{0}\") >0 ".format(keyword)
-            else:
-                conditions = conditions + "OR instr(keywords_in_onto,\"{0}\") >0 ".format(keyword)
-        conditions += ")"
+            conditions +=" and "
+        conditions+="keywords_in_onto REGEXP \".*({0}).*\"".format("|".join(selected_object))
+
+    if selected_polarite:
+        if selected_verb or selected_feature or selected_object:
+            conditions +=" and "
+        conditions+="verbe_polarity == {0}".format(selected_polarite)
+
     print(template.format(conditions))
     selection = pd.read_sql_query(template.format(conditions),con)
     selection["dep_code"] = selection.code_postal.apply(lambda x : x[:2])

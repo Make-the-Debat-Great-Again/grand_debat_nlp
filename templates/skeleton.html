@@ -26,49 +26,82 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
+    <!--    Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body >
     <style>
+        body{
+            font-family: 'Cabin', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+        html, body {
+          height: 100%;
+        }
+        .container {
+          flex: 1 0 auto;
+        }
+        .footer{
+             flex-shrink: 0;
+        }
         #map_id {
             height: 600px;
         }
     </style>
     <div class="container">
-        <h1>Localisation des propositions faites sur le Grand Débat</h1>
-        <div class="col-12">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quod delectus animi beatae explicabo harum
-                aliquid vero, inventore dolorem dignissimos incidunt eveniet ex voluptatum sunt nobis veniam eos minima
-                distinctio.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex asperiores, a autem, quod doloribus illum
-                ipsum quasi dignissimos perferendis saepe, fuga est esse doloremque. Quasi sit illum repellendus laborum
-                esse?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex asperiores, a autem, quod doloribus illum
-                ipsum quasi dignissimos perferendis saepe, fuga est esse doloremque. Quasi sit illum repellendus laborum
-                esse?</p>
+        <h1 class="text-center">Localisation des propositions faites sur le Grand Débat</h1>
+        <div class="col-xm-12">
+            <p>
+                Dans le cadre de l'analyse des données du Grand Débat National, nous proposons un approche pour extraire les propositions faites par les contributeurs. Une propositon est composé de trois caractéristiques.
+                L'<strong>objet</strong> est la cible de la proposition. Le <strong>verbe</strong> indique le changement souhaité envers l'objet. La <strong>caractéristique</strong> permet d'affiner et de savoir quelle partie de l'objet est ciblé.
+            </p>
+
+            <p>
+                Cette application permet de filter et de visualiser la géolocalisation des propositions dans une carte interactive.
+            </p>
 
         </div>
         <div class="row">
-            <div class="col-8" id="map_id"></div>
-            <div class="col-4">
-                <h2 class="text-center">Tags</h2>
-                <span class="h5">Verbes</span>
+            <div class="col-lg-8" id="map_id"></div>
+            <div class="col-lg-4">
+                <h2 class="text-center">Filtres</h2>
+                <hr>
+                <span class="h5">Polarité du verbe</span>
+                <select class="polarite col-12" id="polarite" name="polarite[]">
+                    <option value="null">None</option>
+                    <option value="-1">Negative</option>
+                    <option value="0">Neutre</option>
+                    <option value="1">Positive</option>
+
+                </select>
+                <br><br><h6 class="text-center">ou</h6>
+                <span class="h5">Verbes</span><br>
                 <select class="verbes col-12" id="verbes" name="verbs[]" multiple="multiple">
                 </select>
-
-                <span class="h5">Caractéristiques</span>
+                <hr>
+                <span class="h5">Caractéristiques</span><br>
                 <select class="features col-12"  id="features" name="features[]" multiple="multiple">
                 </select>
-
-                <span class="h5">Objets</span>
+                <hr>
+                <span class="h5">Objets</span><br>
                 <select class="objets col-12"  id="objets" name="objects[]"  multiple="multiple">
                 </select>
                 <br><br>
-                <button class="btn btn-primary" id="send">Voir les résultats</button>
+                <div class="text-center">
+                    <button class="btn btn-primary" id="send">Voir les résultats</button>
+                </div>
             </div>
         </div>
 
     </div>
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container">
+        <span class="text-muted">Jacques Fize 2020</span>
+      </div>
+    </footer>
 
 
 
@@ -101,6 +134,10 @@
             };
         }
 
+
+        $(document).ready(function () {
+            $('#polarite').select2();
+        });
 
         $(document).ready(function () {
             $('.verbes').select2({
@@ -173,12 +210,13 @@
             var objects = $("#objets").val();
             var features = $("#features").val();
             var verbes = $("#verbes").val();
+            var polarite = $("#polarite").val();
             console.log(objects,features,verbes)
             
             $.ajax({
                 type: "POST",
                 url: "/query", //localhost Flask
-                data: JSON.stringify({obj:objects,feat:features,verb:verbes}),
+                data: JSON.stringify({obj:objects,feat:features,verb:verbes,pol:polarite}),
                 contentType: "application/json",
                 dataType: "json",
                 success: function (data_, statut) {
@@ -192,6 +230,9 @@
                                 pointToLayer: function (feature, latlng) {
                                     return L.circleMarker(latlng, {});
                                 },
+                                onEachFeature: function (feature, layer) {
+                                    layer.bindPopup('<p>Nombre de motifs détéctés: '+dataset[feature.properties.code_insee]+'</p>');
+                                  },
                                 style: style
                             }).addTo(map);
                         });
@@ -206,6 +247,8 @@
             });
             
         });
+
+
 
     </script>
 </body>
